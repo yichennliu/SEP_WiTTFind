@@ -1,0 +1,16 @@
+bemerkung: 2
+absicht: 1
+adresse: 1
+aufzeichnung: 1
+fragmentarisch: 1
+kenntnis: 1
+lesen: 1
+mein: 1
+meiner: 1
+philosophisch: 1
+setzen: 1
+titeln: 1
+tod: 1
+veröffentlicht: 1
+widmung: 1
+zueignen: 1

@@ -1,0 +1,72 @@
+#screenshot {
+    background: none repeat scroll 0 0 #333;
+    border: 1px solid #ccc;
+    color: #fff;
+    display: none;
+    padding: 3px;
+    position: absolute;
+}
+
+.relation { 
+    background-color: #bdbdbd;
+}
+
+.navchighlight { 
+    background: grey;
+}
+
+navc {
+	font-size: 0.91em;
+	float: left;
+	width: 15em;
+	padding: 0;
+	background: white;
+}
+
+navc ul {
+	padding: 0;
+}
+
+navc li {
+	list-style: no;
+	margin: 0;
+	padding: 0.5em;
+}
+
+navc a {
+	display: block;
+	padding: 0.2em 10px;
+	font-weight: bold;
+	text-decoration: none;
+	background-color: #dddddd;
+	color: black;
+}
+
+navc ul a:hover {
+	color: white;
+	background-color: black;
+}
+			
+mitte {
+	margin-left: 3em;
+	margin-right: 3em;
+}
+
+rechts {
+	float: right;
+	margin-right: 3em;
+}		
+
+.ui-widget-content {background-color: grey;}
+.ui-dialog-title { color: black}
+.ui-icon-closethick,.ui-state-hover {background-color: grey;}
+
+.ui-helper-clearfix,.ui-button-text {
+  background-color: #f5f5f5;
+  color: #444;
+  border-color: #d9d9d9 #d9d9d9 #ccc;
+  border-radius: grey;
+  background-image: none;
+}
+
+.ui-corner-all {background-color: white;}

@@ -1,0 +1,51 @@
+.deploy_steps_template: &deploy_steps
+  script:
+    - pushd $PROJECT_HOME
+    - find -type l -delete
+    - rm -rf *
+    - popd
+    - cp -r * $PROJECT_HOME
+    - pushd $PROJECT_HOME
+    - git clone -b $DATA_REPOSITORY_BRANCH $DATA_REPOSITORY_URL
+    - pushd $DATA_REPOSITORY_NAME/deployment
+    - make convert-freqlist-json
+    - make export-converted-freqlist-json
+    - popd
+    - mkdir data
+    - cp -r $WITT_DATA_HOME/export-data/lexikon/* data
+    - ln -svf $FACSIMILE_LINK facsimile
+    - make npm
+    - mkdir components
+    - cp -r node_modules/* components
+
+deploy_testing:
+  stage: deploy
+  variables:
+    PROJECT_HOME: "/srv/www/vhosts/wittfind/htdocs"
+    FACSIMILE_LINK: "/nfs/wittfind/facsimile"
+    DATA_REPOSITORY_URL: "git@gitlab.cis.uni-muenchen.de:wast/witt-data.git"
+    DATA_REPOSITORY_BRANCH: "master"
+    DATA_REPOSITORY_NAME: "witt-data"
+    WITT_DATA_HOME: "/home/gitlab-ci/testing-witt-data/"
+  <<: *deploy_steps
+  environment: Testing
+  tags:
+    - testing
+
+deploy_production:
+  stage: deploy
+  variables:
+    PROJECT_HOME: "/srv/www/vhosts/wittfind/htdocs"
+    FACSIMILE_LINK: "/nfs/wittfind/facsimile"
+    DATA_REPOSITORY_URL: "git@gitlab.cis.uni-muenchen.de:wast/witt-data.git"
+    DATA_REPOSITORY_BRANCH: "master"
+    DATA_REPOSITORY_NAME: "witt-data"
+    WITT_DATA_HOME: "/home/gitlab-ci/production-witt-data/"
+  <<: *deploy_steps
+  after_script:
+    - 'sed -i ''s/\("host": "\)dev\./\1/g'' $PROJECT_HOME/include/config.js'
+  environment: Production
+  tags:
+    - production
+  only:
+    - master

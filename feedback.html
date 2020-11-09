@@ -1,0 +1,60 @@
+<div class="page-header" id="header-feedback">
+  <h2>Feedback</h3>
+  <p class="lead"></p>
+</div>
+<form name="feedback" id="form_feedback">
+  <div class="form-group">
+    <label class="font-weight-bold" for="input_email">Email address</label>
+    <input type="email" class="form-control" id="input_email" required="required" placeholder="Enter email">
+  </div>
+  <div class="form-group" id="form_compontents">
+    <label class="font-weight-bold" for="select_components">Component</label>
+    <select class="form-control" id="select_components" required="required" autofocus="">
+    </select>
+  </div>
+  <div class="form-group" id="form_area">
+    <label class="font-weight-bold" for="select_areas">Area</label>
+    <select class="form-control" id="select_areas" required="required">
+    </select>
+  </div>
+  <div class="form-group" id="form_title">
+    <label class="font-weight-bold" for="input_title">Short Description</label>
+    <input type="text" class="form-control" id="input_title" required="required" placeholder="Title...">
+  </div>
+  <div class="form-group" id="form_description">
+    <label class="font-weight-bold" for="text_description">Description</label>
+    <textarea class="form-control" id="text_description" rows="3" required="required" placeholder="Leave your feedback here..."></textarea>
+  </div>
+  <div class="form-group" id="severity">
+    <label class="font-weight-bold" for="options_severity">Severity</label>
+    <div class="radio">
+      <label>
+        <input type="radio" name="options_severity" id="option_severity_1" value="p1">
+        Very important issue
+      </label>
+    </div>
+    <div class="radio">
+      <label>
+        <input type="radio" name="options_severity" id="option_severity_2" value="p2" checked>
+        Important Issue
+      </label>
+    </div>
+    <div class="radio">
+      <label>
+        <input type="radio" name="options_severity" id="option_severity_3" value="p3">
+        Issue worth noting
+      </label>
+    </div>
+    <div class="radio">
+      <label>
+        <input type="radio" name="options_severity" id="option_severity_4" value="p4">
+        Not so imporant issue - nice to have
+      </label>
+    </div>
+  </div>
+  <div class="form-group" id="form_security">
+    <label class="font-weight-bold" for="security_question" id="label_security_question" >Security question: Choose one of your favourite programmers: Stallman, Wall, Kernighan, Ritchie.</label>
+    <input type="text" class="form-control" id="security_question" required="required" pattern="([Ss]tallman)|([Ww]all)|([Kk]ernighan)|([Rr]itchie)" title="Choose one of your favourite progammers from Stallman, Wall, Kernighan or Ritchie." placeholder="Type your favourite programmer here...">
+  </div>
+  <button type="submit" class="btn btn-secondary">Submit</button>
+</form>

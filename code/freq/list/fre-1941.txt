@@ -1,0 +1,9 @@
+dachte: 1
+macht: 1
+menschen: 1
+mich: 1
+ob: 1
+schumann: 1
+sehnsucht: 1
+unerfüllte: 1
+wahnsinnig: 1

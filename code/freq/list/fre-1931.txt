@@ -1,0 +1,15 @@
+wurf: 2
+ausführen: 1
+für: 1
+geist: 1
+macht: 1
+mich: 1
+muß: 1
+nichts: 1
+richtig: 1
+solange: 1
+verkrampft: 1
+verstand: 1
+üben: 1
+überhaupt: 1
+übrigens: 1

@@ -1,0 +1,40 @@
+{
+  "name": "wittfind-web",
+  "description": "wittfind-web dependencies",
+  "main": "include/main.js",
+  "devDependencies": {
+    "light-server": "^2.6.0"
+  },
+  "dependencies": {
+    "angular": "^1.7.5",
+    "bootstrap": "^4.2.1",
+    "bowser": "*",
+    "c3": "0.4.22",
+    "diff": "^4.0.1",
+    "es6-promise": "*",
+    "font-awesome": "^4.7.0",
+    "image-map-resizer": "^1.0.7",
+    "jquery": "^3.3.1",
+    "jquery-ui": "^1.11.2",
+    "jquery-ui-dist": "^1.12.1",
+    "jquery-unveil": "^1.3.2",
+    "lodash": "*",
+    "markdown": "*",
+    "popper.js": "^1.14.6",
+    "pubsub.js": "*",
+    "qunit": "^2.8.0",
+    "raphael": "*",
+    "requirejs": "^2.3.6",
+    "striptags": "^3.1.1",
+    "wordcloud": "^1.1.0"
+  },
+  "scripts": {
+    "dev": "node_modules/light-server/bin/light-server --config light-server.json"
+  },
+  "license": "MIT",
+  "version": "17.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.cis.uni-muenchen.de:wast/wittfind-web.git"
+  }
+}

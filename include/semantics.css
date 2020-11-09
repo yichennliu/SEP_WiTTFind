@@ -1,0 +1,24 @@
+/*** Css for Semantic.html  ***/
+
+.panel-bg-color{
+  background-color: #696969 !important;
+
+}
+.panel-headText-color{
+  color: white;
+}
+
+.fa-question-circle{
+  color:white;
+  font-size: 20px;
+}
+
+.list-group-item:hover{
+  background-color: #f6f6f6;
+}
+
+#freqlist .panel-heading,
+#col-right-secondary .panel-heading {
+  background: #696969 !important;
+  color: white;
+}

@@ -1,0 +1,11 @@
+cheat: 4
+you: 3
+don: 2
+if: 2
+others: 2
+yourself: 2
+and: 1
+least: 1
+should: 1
+the: 1
+why: 1

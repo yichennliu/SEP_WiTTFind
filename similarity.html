@@ -1,0 +1,58 @@
+<meta charset="UTF-8">
+<!-- <script>src="components/jquery/dist/jquery.js"</script> --> 
+<!-- <div class="container-fluid"> -->
+    
+    <div class="row">
+        <script>hide_motto();</script>
+        <!-- <form action="/sim2texts" method="POST"> -->
+        <div class="col-12">
+            <div class="similarity_checker">
+                <div class="card">
+                    <div class="card-header"> 
+                        <center><h5>WittSim</h5></center>
+                    </div>
+                    <br />
+                    <div class="card_body">
+                    
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <center><h6>Text 1</h6></center>
+                                    <textarea class= "form-control" name="inputtext1" id="input1" cols="50" rows="10" placeholder="Bitte Text eingeben"></textarea>
+                                </div>
+                                <input type="radio" name="lang" value="de" checked> Deutsch<br />
+                                <input type="radio" name="lang" value="en"> English<br /><br />
+                                <div>
+                                    <button class="btn btn-secondary" id="wittsim_button">Calculate similarity</button>
+                                </div>
+                                <div class="row" style="height: 150px;">
+                                    <div id="wittsim-result-div" style="margin: 0 auto; text-align: center; min-width: 300px; max-width: 50%; display: none">
+                                      <div class="card">
+                                        <div class="card-header">
+                                          WittSim
+                                        </div>
+                                        <div class="card-body">
+                                          <h6 class="card-title"><u>Ergebnis der Ähnlichkeitssuche</u></h6>
+                                          <h6 class="card-text"id="wittsim-result"></h6>
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <center><h6>Text 2</h6></center>
+                                    <textarea class= "form-control" name="inputtext2" id="input2" cols="50" rows="10" placeholder="Bitte zu vergleichenden Text eingeben"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- </form> -->
+    </div>
+</div>
+

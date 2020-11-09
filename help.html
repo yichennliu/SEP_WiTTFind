@@ -1,0 +1,1539 @@
+<div class = "container">
+<div class ="row">
+	<div class="col-md-10 " id="col-left">
+<div id="accordion">
+    <div class="card" id="panel1" style="border:1px solid gray">
+        <div class="card bg-secondary mt-2">
+		    <a class="card-header help-class panel-headText-color" data-toggle="collapse" href="#collapseOne" id="exakte_suche">Exakte Suche</a>
+        </div>
+	    <div id="collapseOne" class="collapse">
+	        <div class="card-body">
+			    <div class="accordion">
+					  <div class="table table-bordered">
+							<input title="alle Wörter mit genau dem Wortlaut &quot;schwarzer&quot;" value="&quot;schwarzer&quot;" onclick="$('.form-control').val(value)"  type="button">
+							<input title="alle Wörter mit genau dem Wortlaut &quot;der&quot;, gefolgt von einem Wort beginnend mit &quot;Kr&quot;" value="&quot;der&quot; Kr*" onclick="$('.form-control').val(value)"  type="button">
+					  </div>
+					  <div>
+						<br>
+						 <h3>Anfrage - Beschreibung</h3>
+						 <table style="border:solid #CDCDCD 6px">
+						  <tbody>
+							  <tr>
+								<td><input value="&quot;Kreis&quot;" onclick="$('.form-control').val(value)" type="button"></td>
+								<td >genauer Wortlaut "Kreis"</td>
+							  </tr>
+							  <tr >
+								<td><input value="Kr*" onclick="$('.form-control').val(value)" type="button"></td>
+								<td >Wort, das mit Kr beginnt - Liefert "Kreis", "Krank", "Kriterium" usw.</td>
+							  </tr>
+							  <tr >
+								<td><input value="&quot;der&quot; &quot;Kreis&quot;" onclick="$('.form-control').val(value)" type="button"></td>
+								<td  >Findet genau die Wortfolge "der Kreis"</td>
+							  </tr>
+							  <tr >
+								<td><input value="*eis" onclick="$('.form-control').val(value)" type="button"></td>
+								<td  >Wort, das auf eis endet - Liefert "Beweis", "Kreis" usw. </td>
+							  </tr>
+							  <tr >
+							  	<td><input value="&quot;schwarzen&quot; &quot;Kreis&quot;" onclick="$('.form-control').val(value)"  type="button"></td>
+							  	<td> alle Stellen mit genau dem Wortlaut "schwarzen" gefolgt von genauem Wortlaut "Kreis"</td>
+							  </tr>
+							  <tr >
+							  	<td><input value="&quot;schwarzen&quot; Kreis" onclick="$('.form-control').val(value)"  type="button"></td>
+							  	<td> Einfache Suche kann auch mit lexikalischer Suche kombiniert werden - alle Wörter mit genau dem Wortlaut "schwarzen" gefolgt von allen lexikalischen Formen von "Kreis" - s. lexikalische Suche</td>
+							  </tr>
+							  <tr >
+							  	<td><input value="&quot;der&quot; * Mann" onclick="$('.form-control').val(value)"  type="button"></td>
+							  	<td> alle Stellen mit genauem Wortlaut: "der", gefolgt von einem beliebigen Wort, gefolgt von allen lexikalischen Formen von "Mann"</td>
+							  </tr>
+						   </tbody>
+						</table>
+					  </div>
+					</div>
+				</div>
+			</div>
+    </div>
+        <!-- Lexikalische Suche  -->
+    <div class="card" id="panel2" style="border:1px solid gray">
+        <div class="card bg-secondary mt-2">
+				<a class="card-header help-class panel-headText-color" data-toggle="collapse" href="#collapseTwo" id="lexikal_suche">Lexikalische Suche</a>
+        </div>
+        <div id="collapseTwo" class=" collapse">
+            <div class="card-body">
+				<div class="accordion card">
+				  <div class="table table-bordered">
+						<input title="alle lexikalischen Formen von schwarz" value="schwarz" onclick="$('.form-control').val(value)"  type="button">
+						<input title="alle lexikalischen Formen von &quot;schwarz&quot;, gefolgt von allen lexikalischen Formen von &quot;Kreis&quot;" value="schwarz Kreis" onclick="$('.form-control').val(value)"  type="button">
+						<input title="alle lexikalischen Formen von &quot;der&quot; und alle lexikalischen Formen von &quot;Kreis&quot;" value="der Kreis" onclick="$('.form-control').val(value)"  type="button">
+				  </div>
+				  <div>
+					<br>
+					 <h3>Anfrage - Beschreibung</h3>
+					 <table style="border:solid #CDCDCD 6px">
+					  <tbody>
+						  <tr  >
+							<td><input value="Kreis" onclick="$('.form-control').val(value)" type="button"></td>
+							<td >alle lexikalischen Formen von Kreis</td>
+						  </tr>
+						  <tr  >
+							<td><input value="schwarz Kreis" onclick="$('.form-control').val(value)" type="button"></td>
+							<td >alle lexikalischen Formen von "schwarz" gefolgt von allen lexikalischen Formen von "Kreis"</td>
+						  </tr>
+					   </tbody>
+					</table>
+				  </div>
+				</div>
+			</div>
+		</div>
+    </div>
+
+    <!--satzkategorien-->
+    <div class="card" id="panel3" style="border:1px solid gray">
+        <div class="card bg-secondary mt-2">
+			<a data-toggle="collapse" href="#collapseThree" class="card-header help-class panel-headText-color" id="satz">Satzkategorien</a>
+        </div>
+        <div id="collapseThree" class=" collapse">
+            <div class="card-body">
+				<div class="table table-bordered">
+					<input title="mir + Satzzeichen + was" value="mir <PUNCT> was" onclick="$('.form-control').val(value)"  type="button">
+					<input title="mir + Satzzeichen, gefolgt von genau dem Wortlaut &quot;was&quot;" value="&quot;mir&quot; <PUNCT> &quot;was&quot;" onclick="$('.form-control').val(value)"  type="button">
+					<input   title="Satzzeichen + beliebiges Wort + Satzzeichen" value="<PUNCT> <MOT> <PUNCT>" onclick="$('.form-control').val(value)"  type="button">
+					<input   title="Satzanfang + ich" value="<BOS> ich" onclick="$('.form-control').val(value)"  type="button">
+					<input   title="können + Satzzeichen + Satzende" value="können <PUNCT> <EOS>" onclick="$('.form-control').val(value)"  type="button">
+					<input   title="Satzanfang + beliebiges Wort + Satzende" value="<BOS> <MOT> <EOS>" onclick="$('.form-control').val(value)"  type="button">
+				</div>
+			  <div>
+				<br>
+					<h3>Tag - Kategorie - Beispiele</h3>
+					<table style="border:solid #CDCDCD 6px">
+					  <tbody>
+						  <tr>
+							<td><input value="<BOS>" onclick="$('.form-control').val(value)" type="button"></td>
+							<td  >Satzanfang</td>
+							<td  >. Ich</td>
+						  </tr>
+						  <tr >
+							<td><input value="<EOS>" onclick="$('.form-control').val(value)" type="button"></td>
+							<td >Satzende</td>
+							<td >gegangen. </td>
+						  </tr>
+						  <tr>
+							<td><input value="*" onclick="$('.form-control').val(value)" type="button"></td>
+							<td  >beliebiges Wort</td>
+							<td  >Nomen, Adjektiv, Verb, ...</td>
+						  </tr>
+						  <tr>
+							<td><input value="<MOT>" onclick="$('.form-control').val(value)" type="button"></td>
+							<td  >beliebiges Wort</td>
+							<td  >Nomen, Adjektive, Verb, ...</td>
+						  </tr>
+						  <tr >
+							<td><input value="<PUNCT>" onclick="$('.form-control').val(value)" type="button"></td>
+							<td  >Punktuations-Zeichen</td>
+							<td  >. ? ! ; :</td>
+						  </tr>
+						  <tr>
+							<td><input value=" / " onclick="$('.form-control').val(value)" type="button"></td>
+							<td  >Alternative</td>
+							<td  >denken / dachte</td>
+						  </tr>
+					</tbody>
+					</table>
+				</div>
+
+			</div>
+        </div>
+    </div>
+	<!-- Lexikalische Wortkategorien -->
+    <div class="card" id="panel4" style="border:1px solid gray">
+        <div class="card bg-secondary mt-2">
+				<a data-toggle="collapse" href="#collapseFour" class="card-header help-class panel-headText-color" id="lexikal_wort"> Lexikalische Wortkategorien</a>
+        </div>
+        <div id="collapseFour" class=" collapse">
+            <div class="card-body">
+				<div class="table table-bordered">
+				<input title="Eigenname + und + Eigenname" value="<EN> und <EN>" onclick="$('.form-control').val(value)"  type="button">
+				<input title="Konjunktion + Eigenname" value="<KONJ> <EN>" onclick="$('.form-control').val(value)"  type="button">
+				<input title="die + beliebiges Adjektiv + Farbe" value="die <ADJ> Farbe" onclick="$('.form-control').val(value)"  type="button">
+				<input title="die + genau Wortlaut &quot;gleiche&quot; + Farbe" value="die &quot;gleiche&quot; Farbe" onclick="$('.form-control').val(value)"  type="button">
+				<input title="die + gleiche + Nomen" value="die gleiche <N>" onclick="$('.form-control').val(value)"  type="button">
+				<input title="die + genau Wortlaut &quot;gleiche&quot; + Nomen" value="die &quot;gleiche&quot; <N>" onclick="$('.form-control').val(value)"  type="button">
+				<input title="Verb + beliebiges Wort + Eigenname" value="<V> <MOT> <EN>" onclick="$('.form-control').val(value)"  type="button">
+				</div>
+
+				<div >
+					<br>
+					<h3>Tag - Kategorie - Frequenzliste Nachlass</h3>
+
+					<table style="border:solid #CDCDCD 6px" class="lexikalischeKategorien">
+						<table style="border:solid #CDCDCD 6px">
+						<tr style=" background-color: #CDCDCD; border-bottom: 2px solid #CDCDCD">
+
+					<td><input value="<N>" onclick="$('.form-control').val(value)" type="button"></td>
+					<td  >Nomen</td>
+							<td></td>
+					<td  ></td>
+						</tr>
+							<tr>
+					  <td>
+						  <a onclick="show_word_cloud('nomen','#word-cloud-nomen')"
+							 href="#" data-toggle="tooltip" data-placement="right"
+							 data-content="Satz, Wenn, Aber, Sprache">
+							  Frequenzliste Nachlass
+						  </a>
+						  <td colspan="3">
+						  <div id="word-cloud-nomen-closebtn" class="pull-right" style="display: none;"><button type="button" class="btn btn-xs" onclick="hide_word_cloud('#word-cloud-nomen');"><span>&times;</span><span class="sr-only">Close</span></button></div>
+						  <div style="height: 350px; width:400px; display: none;" id="word-cloud-nomen" class="word-cloud-semantics"></div>
+							</td>
+					  </td>
+						</tr> </table>
+
+						<table style="border:solid #CDCDCD 6px">
+							<tr style=" background-color: #CDCDCD; border-bottom: 2px solid #CDCDCD">
+
+					<td><input value="<ADJ>" onclick="$('.form-control').val(value)" type="button"></td>
+					<td  >Adjektiv</td>
+					<td  ></td>
+					  <td></td>
+							</tr>
+								<tr>
+					  <td>
+						  <a onclick="show_word_cloud('adjektive','#word-cloud-adjektive')"
+							 href="#" data-toggle="tooltip" data-placement="right"
+							 data-content="eben, A, ganz, andern">
+							  Frequenzliste Nachlass
+						  </a>
+					  </td><td colspan="3">
+						  <div id="word-cloud-adjektive-closebtn" class="pull-right" style="display: none;"><button type="button" class="btn btn-xs" onclick="hide_word_cloud('#word-cloud-adjektive');"><span>&times;</span><span class="sr-only">Close</span></button></div>
+						  <div  id="word-cloud-adjektive" class="word-cloud-semantics"></div>
+
+					  </td>
+				  </tr>
+						</table>
+
+
+						<table style="border:solid #CDCDCD 6px">
+							<tr style=" background-color: #CDCDCD; border-bottom: 2px solid #CDCDCD">
+
+					<td><input value="<V>" onclick="$('.form-control').val(value)" type="button"></td>
+					<td  >Verb</td>
+					<td  ></td>
+					<td  ></td>
+							</tr>
+							<tr>
+					  <td>
+						  <a onclick="show_word_cloud('verben','#word-cloud-verben')"
+							 href="#" data-toggle="tooltip" data-placement="right"
+							 data-content="ist, eine, kann, sagen">
+							  Frequenzliste Nachlass
+						  </a>
+								</td>
+
+							<td colspan="3">
+						  <div id="word-cloud-verben-closebtn" class="pull-right" style="display: none;"><button type="button" class="btn btn-xs" onclick="hide_word_cloud('#word-cloud-verben');"><span>&times;</span><span class="sr-only">Close</span></button></div>
+						  <div  id="word-cloud-verben" class="word-cloud-semantics"></div>
+
+					  </td>
+
+							</tr></table>
+
+						<table style="border:solid #CDCDCD 6px">
+							<tr style=" background-color: #CDCDCD; border-bottom: 2px solid #CDCDCD">
+
+					<td><input value="<DET>" onclick="$('.form-control').val(value)" type="button"></td>
+					<td  >Determinativ</td>
+					<td  ></td>
+					<td  ></td>
+							</tr><tr>
+					  <td>
+						  <a onclick="show_word_cloud('det','#word-cloud-det')"
+							 href="#" data-toggle="tooltip" data-placement="right"
+							 data-content="die, der, das, eine">
+							  Frequenzliste Nachlass
+						  </a>
+					  </td><td colspan="3">
+						  <div id="word-cloud-det-closebtn" class="pull-right" style="display: none;"><button type="button" class="btn btn-xs" onclick="hide_word_cloud('#word-cloud-det');"><span>&times;</span><span class="sr-only">Close</span></button></div>
+						  <div  id="word-cloud-det" class="word-cloud-semantics"></div>
+
+					  </td>
+				  </tr>
+
+						</table>
+
+						<table style="border:solid #CDCDCD 6px">
+							<tr style=" background-color: #CDCDCD; border-bottom: 2px solid #CDCDCD">
+
+					<td><input value="<ADV>" onclick="$('.form-control').val(value)" type="button"></td>
+					<td  >Adverb</td>
+					<td  ></td>
+					<td  ></td>
+							</tr><tr>
+					  <td>
+						  <a onclick="show_word_cloud('det','#word-cloud-adv')"
+							 href="#" data-toggle="tooltip" data-placement="right"
+							 data-content="nicht, zu, so, wie">
+							  Frequenzliste Nachlass
+						  </a></td><td colspan="3">
+						  <div id="word-cloud-adv-closebtn" class="pull-right" style="display: none;"><button type="button" class="btn btn-xs" onclick="hide_word_cloud('#word-cloud-adv');"><span>&times;</span><span class="sr-only">Close</span></button></div>
+						  <div  id="word-cloud-adv" class="word-cloud-semantics"></div>
+
+					  </td>
+						</tr> </table>
+
+
+						<table style="border:solid #CDCDCD 6px">
+							<tr style=" background-color: #CDCDCD; border-bottom: 2px solid #CDCDCD">
+					<td><input value="<PART>" onclick="$('.form-control').val(value)" type="button"></td>
+					<td  >Partikel</td>
+					<td  ></td>
+								<td></td> </tr><tr>
+					  <td>
+						  <a onclick="show_word_cloud('part','#word-cloud-part')"
+							 href="#" data-toggle="tooltip" data-placement="right"
+							 data-content="nicht, zu, so, wie">
+							  Frequenzliste Nachlass
+						  </a> </td><td colspan="3">
+						  <div id="word-cloud-part-closebtn" class="pull-right" style="display: none;"><button type="button" class="btn btn-xs" onclick="hide_word_cloud('#word-cloud-part');"><span>&times;</span><span class="sr-only">Close</span></button></div>
+						  <div  id="word-cloud-part" class="word-cloud-semantics"></div>
+
+					  </td>
+							</tr></table>
+
+						<table style="border:solid #CDCDCD 6px">
+							<tr style=" background-color: #CDCDCD; border-bottom: 2px solid #CDCDCD">
+
+								<td><input value="<PREP>" onclick="$('.form-control').val(value)" type="button"></td>
+					<td  >Präposition</td>
+					<td  ></td>
+					<td  ></td>
+							</tr><tr>
+					  <td>
+						  <a onclick="show_word_cloud('prep','#word-cloud-prep')"
+							 href="#" data-toggle="tooltip" data-placement="right"
+							 data-content="in, zu, von, als">
+							  Frequenzliste Nachlass
+						  </a></td><td colspan="3">
+						  <div id="word-cloud-prep-closebtn" class="pull-right" style="display: none;"><button type="button" class="btn btn-xs" onclick="hide_word_cloud('#word-cloud-prep');"><span>&times;</span><span class="sr-only">Close</span></button></div>
+						  <div  id="word-cloud-prep" class="word-cloud-semantics"></div>
+
+					  </td>
+						</tr> </table>
+
+						<table style="border:solid #CDCDCD 6px">
+							<tr style=" background-color: #CDCDCD; border-bottom: 2px solid #CDCDCD">
+
+					<td><input value="<PDET>" onclick="$('.form-control').val(value)" type="button"></td>
+					<td >Präposition mit Artikel verschmolzen</td>
+					<td ></td>
+
+								<td></td></tr><tr>
+					  <td>
+						  <a onclick="show_word_cloud('pdet','#word-cloud-pdet')"
+							 href="#" data-toggle="tooltip" data-placement="right"
+							 data-content="im, zur, zum, vom">
+							  Frequenzliste Nachlass
+						  </a></td><td colspan="3">
+						  <div id="word-cloud-pdet-closebtn" class="pull-right" style="display: none;"><button type="button" class="btn btn-xs" onclick="hide_word_cloud('#word-cloud-pdet');"><span>&times;</span><span class="sr-only">Close</span></button></div>
+						  <div  id="word-cloud-pdet" class="word-cloud-semantics"></div>
+
+					  </td>
+
+						</tr></table>
+
+						<table style="border:solid #CDCDCD 6px">
+						<tr style=" background-color: #CDCDCD; border-bottom: 2px solid #CDCDCD">
+					<td><input value="<KONJ>" onclick="$('.form-control').val(value)" type="button"></td>
+					<td >Konjunktion</td>
+					<td ></td>
+					<td ></td>
+						</tr><tr>
+					  <td>
+						  <a onclick="show_word_cloud('konj','#word-cloud-konj')"
+							 href="#" data-toggle="tooltip" data-placement="right"
+							 data-content="nicht, und, dafuer,zu">
+							  Frequenzliste Nachlass
+						  </a></td><td colspan="3">
+						  <div id="word-cloud-konj-closebtn" class="pull-right" style="display: none;"><button type="button" class="btn btn-xs" onclick="hide_word_cloud('#word-cloud-konj');"><span>&times;</span><span class="sr-only">Close</span></button></div>
+						  <div  id="word-cloud-konj" class="word-cloud-semantics"></div>
+
+					  </td>
+						</tr> </table>
+
+						<table style="border:solid #CDCDCD 6px">
+							<tr style=" background-color: #CDCDCD; border-bottom: 2px solid #CDCDCD">
+
+					<td><input value="<INTJ>" onclick="$('.form-control').val(value)" type="button"></td>
+					<td>Interjektion</td>
+					<td></td>
+					<td></td>
+							</tr><tr>
+					  <td>
+						  <a onclick="show_word_cloud('intj','#word-cloud-intj')"
+							 href="#" data-toggle="tooltip" data-placement="right"
+							 data-content="ei, ne, tut, nein">
+							  Frequenzliste Nachlass
+						  </a> </td><td colspan="3">
+						  <div id="word-cloud-intj-closebtn" class="pull-right" style="display: none;"><button type="button" class="btn btn-xs" onclick="hide_word_cloud('#word-cloud-intj');"><span>&times;</span><span class="sr-only">Close</span></button></div>
+						  <div  id="word-cloud-intj" class="word-cloud-semantics"></div>
+
+					  </td>
+						</tr></table>
+
+						<table style="border:solid #CDCDCD 6px">
+							<tr style=" background-color: #CDCDCD; border-bottom: 2px solid #CDCDCD">
+
+					<td><input value="<VPART>" onclick="$('.form-control').val(value)" type="button"></td>
+					<td>Verbpartikel</td>
+					<td></td>
+					<td></td>
+							</tr><tr>
+					  <td>
+						  <a onclick="show_word_cloud('vpart','#word-cloud-vpart')"
+							 href="#" data-toggle="tooltip" data-placement="right"
+							 data-content="zu, ein, mit, auf">
+							  Frequenzliste Nachlass
+						  </a></td><td colspan="3">
+						  <div id="word-cloud-vpart-closebtn" class="pull-right" style="display: none;"><button type="button" class="btn btn-xs" onclick="hide_word_cloud('#word-cloud-vpart');"><span>&times;</span><span class="sr-only">Close</span></button></div>
+						  <div  id="word-cloud-vpart" class="word-cloud-semantics"></div>
+
+					  </td>
+						</tr></table>
+
+						<table style="border:solid #CDCDCD 6px">
+							<tr style=" background-color: #CDCDCD; border-bottom: 2px solid #CDCDCD">
+
+					<td><input value="<EN>" onclick="$('.form-control').val(value)" type="button"></td>
+					<td>Eigenname</td>
+					<td></td>
+
+					  <td></td>
+							</tr><tr>
+					  <td>
+						  <a onclick="show_word_cloud('en','#word-cloud-en')"
+							 href="#" data-toggle="tooltip" data-placement="right"
+							 data-content="Re, Frege, Ramsey, Russel">
+							  Frequenzliste Nachlass
+						  </a></td><td>
+						  <div id="word-cloud-en-closebtn" class="pull-right" style="display: none;"><button type="button" class="btn btn-xs" onclick="hide_word_cloud('#word-cloud-en');"><span>&times;</span><span class="sr-only">Close</span></button></div>
+						  <div  id="word-cloud-en" class="word-cloud-semantics"></div>
+
+					  </td>
+						</tr></table>
+
+
+				</table>
+				</div>
+
+			</div>
+		</div>
+    </div>
+    <!-- Lexikalische Wortkategorien um morphologische verfeinert -->
+    <div class="card" id="panel5" style="border:1px solid gray">
+        <div class="card bg-secondary mt-2">
+				<a data-toggle="collapse" href="#collapseFive" class="card-header help-class panel-headText-color" id="lexikal"> Lexikalische Wortkategorien um morphologische verfeinert</a>
+        </div>
+        <div id="collapseFive" class=" collapse">
+            <div class="card-body">
+				<div class="table table-bordered">
+					<input title="Verb 3. Person Singular Präsens Indikativ" value="<V:3eGi>" onclick="$('.form-control').val(value)"  type="button">
+					<input   title="es + Verb 3. Singular Präsens Indikativ" value="es <V:3eGi>" onclick="$('.form-control').val(value)"  type="button">
+					<input   title="Verb in der 3. Person" value="<V:3>" onclick="$('.form-control').val(value)"  type="button">
+					<input   title="es + Verb in der 3. Person" value="es <V:3>" onclick="$('.form-control').val(value)"  type="button">
+					<input   title="ich + Verb in der 1. Person" value="ich <V:1>" onclick="$('.form-control').val(value)"  type="button">
+				</div>
+				<div>
+					<br>
+					<h3 >Tag - Kategorie - Eigenschaft</h3>
+					<table style="border:solid #CDCDCD 6px">
+						  <tbody>
+							<tr  >
+							<td><input value="<n>" onclick="$('.form-control').val(value)" type="button"></td>
+							<td >Kasus</td>
+							<td >&lt;Nominativ&gt;</td>
+							<td ></td>
+							</tr> <tr>
+							<td><input value="<a>" onclick="$('.form-control').val(value)" type="button"></td>
+							<td>Kasus</td>
+							<td>&lt;Akkusativ&gt;</td>
+						  </tr> <tr>
+							<td><input value="<d>" onclick="$('.form-control').val(value)" type="button"></td>
+							<td>Kasus</td>
+							<td>&lt;Dativ&gt;</td>
+						  </tr> <tr>
+							<td><input value="<g>" onclick="$('.form-control').val(value)" type="button"></td>
+							<td>Kasus</td>
+							<td>&lt;Genitiv&gt;</td>
+						  </tr> <tr>
+							<td><input value="<e>" onclick="$('.form-control').val(value)" type="button"></td>
+							<td>Numerus</td>
+							<td>&lt;Singular&gt;</td>
+						  </tr><tr>
+							<td><input value="<m>" onclick="$('.form-control').val(value)" type="button"></td>
+							<td>Numerus</td>
+							<td>&lt;Plural&gt;</td>
+						  </tr> <tr>
+							<td><input value="<F>" onclick="$('.form-control').val(value)" type="button"></td>
+							<td>Genus</td>
+							<td>&lt;Femininum&gt;</td>
+						  </tr> <tr>
+							<td><input value="<M>" onclick="$('.form-control').val(value)" type="button"></td>
+							<td>Genus</td>
+							<td>&lt;Maskulinum&gt;</td>
+						  </tr> <tr>
+							<td><input value="<N>" onclick="$('.form-control').val(value)" type="button"></td>
+							<td >Genus</td>
+							<td >&lt;Neutrum&gt;</td>
+						  </tr> <tr >
+							<td><input value="<U>" onclick="$('.form-control').val(value)" type="button"></td>
+							<td  >Genus</td>
+							<td  >&lt;Unspezifiziert&gt;</td>
+						  </tr> <tr>
+							<td><input value="<x>" onclick="$('.form-control').val(value)" type="button"></td>
+							<td  >Deklination (ADJ)</td>
+							<td  >&lt;stark&gt;</td>
+						  </tr> <tr >
+							<td><input value="<y>" onclick="$('.form-control').val(value)" type="button"></td>
+							<td  >Deklination (ADJ)</td>
+							<td  >&lt;schwach&gt;</td>
+						  </tr> <tr>
+							<td><input value="<z>" onclick="$('.form-control').val(value)" type="button"></td>
+							<td  >Deklination (ADJ)</td>
+							<td  >&lt;unspezifiziert&gt;</td>
+						  </tr> <tr >
+							<td><input value="<p>" onclick="$('.form-control').val(value)" type="button"></td>
+							<td  >Komparierung (ADJ,ADV)</td>
+							<td  >&lt;Grundform&gt;</td>
+						  </tr> <tr>
+							<td><input value="<k>" onclick="$('.form-control').val(value)" type="button"></td>
+							<td  >Komparierung (ADJ,ADV)</td>
+							<td  >&lt;Komparativ&gt;</td>
+						  </tr> <tr>
+							<td><input value="<s>" onclick="$('.form-control').val(value)" type="button"></td>
+							<td  >Komparierung (ADJ,ADV)</td>
+							<td  >&lt;Superlativ&gt;</td>
+						  </tr> <tr>
+							<td><input value="<1>" onclick="$('.form-control').val(value)" type="button"></td>
+							<td  >Person</td>
+							<td  >&lt;1.&gt;</td>
+						  </tr> <tr>
+							<td><input value="<2>" onclick="$('.form-control').val(value)" type="button"></td>
+							<td  >Person</td>
+							<td  >&lt;2.&gt;</td>
+						  </tr> <tr  >
+							<td><input value="<3>" onclick="$('.form-control').val(value)" type="button"></td>
+							<td  >Person</td>
+							<td  >&lt;3.&gt;</td>
+						  </tr> <tr  >
+							<td><input value="<0>" onclick="$('.form-control').val(value)" type="button"></td>
+							<td  >Person</td>
+							<td  >&lt;Unbestimmt&gt;</td>
+						  </tr> <tr>
+							<td><input value="<G>" onclick="$('.form-control').val(value)" type="button"></td>
+							<td  >Tempus</td>
+							<td  >&lt;Präsens&gt;</td>
+						  </tr> <tr>
+							<td><input value="<V>" onclick="$('.form-control').val(value)" type="button"></td>
+							<td  >Tempus</td>
+							<td  >&lt;Präteritum,Perfekt&gt;</td>
+						  </tr> <tr>
+							<td><input value="<O>" onclick="$('.form-control').val(value)" type="button"></td>
+							<td  >Tempus</td>
+							<td  >&lt;Unbestimmt&gt;</td>
+						  </tr> <tr>
+							<td><input value="<i>" onclick="$('.form-control').val(value)" type="button"></td>
+							<td  >Modus</td>
+							<td  >&lt;Indikativ&gt;</td>
+						  </tr> <tr>
+							<td><input value="<c>" onclick="$('.form-control').val(value)" type="button"></td>
+							<td  >Modus</td>
+							<td  >&lt;Konjunktiv&gt;</td>
+						  </tr> <tr>
+							<td><input value="<b>" onclick="$('.form-control').val(value)" type="button"></td>
+							<td  >Modus</td>
+							<td  >&lt;Imperativ&gt;</td>
+						  </tr> <tr>
+							<td><input value="<A>" onclick="$('.form-control').val(value)" type="button"></td>
+							<td  >Genus Verbii</td>
+							<td  >&lt;Aktiv&gt;</td>
+						  </tr> <tr>
+							<td><input value="<P>" onclick="$('.form-control').val(value)" type="button"></td>
+							<td  >Genus Verbii</td>
+							<td  >&lt;Passiv&gt;</td>
+						  </tr> <tr>
+							<td><input value="<z>" onclick="$('.form-control').val(value)" type="button"></td>
+							<td  >Infinite Verbform</td>
+							<td  >&lt;Infinitiv&gt;</td>
+						  </tr> <tr>
+							<td><input value="<E>" onclick="$('.form-control').val(value)" type="button"></td>
+							<td  >Infinite Verbform</td>
+							<td  >&lt;PartizipI(Präsens)&gt;</td>
+						  </tr> <tr>
+							<td><input value="<Z>" onclick="$('.form-control').val(value)" type="button"></td>
+							<td  >Infinite Verbform</td>
+							<td  >&lt;PartizipII(Präteritum)&gt;</td>
+						  </tr> <tr>
+							<td><input value="<S>" onclick="$('.form-control').val(value)" type="button"></td>
+							<td  >Deutlichkeit</td>
+							<td  >&lt;Markierte Form (Genitiv)&gt;</td>
+						  </tr>
+						</tbody>
+					</table>
+				</div>
+            </div>
+        </div>
+    </div>
+    <!-- Semantische Kategorien -->
+    <div class="card" id="panel6" style="border:1px solid gray">
+        <div class="card bg-secondary mt-2">
+				<a data-toggle="collapse" href="#collapseSix" class="card-header help-class panel-headText-color" id="semantisch_kategorien"> Semantische Kategorien </a>
+        </div>
+        <div id="collapseSix" class=" collapse">
+            <div class="card-body">
+				<div class="table table-bordered">
+					 <input title="semantische Klasse Menschen + meinen" value="<HUM> meinen" onclick="$('.form-control').val(value)"  type="button">
+					 <input title="semantische Klasse Pflanzen" value="<PF>" onclick="$('.form-control').val(value)"  type="button">
+					 <input title="Adjektiv, gefolgt von semantischer Klasse Pflanzen" value="<ADJ> <PF>" onclick="$('.form-control').val(value)"  type="button">
+					 <input title="Adjektiv, Grundfarbe, Numeralia + Nomen" value="<ADJ+COL+NUM> <N>" onclick="$('.form-control').val(value)"  type="button">
+					 <input title="POS-Adjektiv, gefolgt von semantischer Klasse Pflanzen" value="([ADJA] | [ADJD]) <PF>" onclick="$('.form-control').val(value)"type="button">
+					 <input title="POS-Adjektiv, das zugleich Grundfarbe, Numeralia ist + POS-Nomen" value="(([ADJA] | [ADJD]) &amp; <+COL+NUM>) [NN]" onclick="$('.form-control').val(value)"  type="button">
+				 </div>
+
+			  <div>
+				<br>
+					<h3> Tag - Klasse - Eigenschaft - Beispiele - Frequenzliste Nachlass</h3>
+
+
+					<table style="border:solid #CDCDCD 6px" class="semantischeKategorien" width="100%">
+						<style> table{width:100%;
+							border:5px solid light-gray;} td{width:25%}</style>
+						<table style="border:solid #CDCDCD 6px">
+					   <tr style=" background-color: #CDCDCD; border-bottom: 2px solid #CDCDCD">
+						<td><input value="<HUM>" onclick="$('.form-control').val(value)" type="button"></td>
+						<td >Menschen</td>
+						<td >problemlos zu differenzieren</td>
+						<td  >Advokat, Alchemist</td>
+					  </tr>
+						<tr>
+						  <td>
+							  <a onclick="show_word_cloud('sem_nom_hum','#word-cloud-sem_nom_hum')"
+								 href="#" data-toggle="tooltip" data-placement="right"
+								 data-content="andern, andere, menschen, anderes">
+								  Frequenzliste Nachlass
+							  </a>
+						  </td>
+							  <td colspan="3">
+							  <div id="word-cloud-sem_nom_hum-closebtn" class="pull-right" style="display: none;"><button type="button" class="btn btn-xs" onclick="hide_word_cloud('#word-cloud-sem_nom_hum');"><span>&times;</span><span class="sr-only">Close</span></button></div>
+							  <div  id="word-cloud-sem_nom_hum" class="word-cloud-semantics"></div>
+
+						  </td>
+					  </tr>
+						</table>
+
+						<table style="border:solid #CDCDCD 6px">
+					   <tr  style=" background-color: #CDCDCD; border-bottom: 2px solid #CDCDCD" >
+						<td><input value="<T>" onclick="$('.form-control').val(value)" type="button"></td>
+						<td  >Tiere</td>
+						<td  >problemlos zu differenzieren</td>
+						<td  >Hahn, Hirsch</td>
+					   </tr>
+						<tr>
+						  <td>
+							  <a onclick="show_word_cloud('sem_nom_t','#word-cloud-sem_nom_t')"
+								 href="#" data-toggle="tooltip" data-placement="right"
+								 data-content="wesen, ende, zukunft, vergangenheit">
+								  Frequenzliste Nachlass
+							  </a>
+						  </td>
+							<td colspan="3">
+							  <div id="word-cloud-sem_nom_t-closebtn" class="pull-right" style="display: none;"><button type="button" class="btn btn-xs" onclick="hide_word_cloud('#word-cloud-sem_nom_t');"><span>&times;</span><span class="sr-only">Close</span></button></div>
+							  <div  id="word-cloud-sem_nom_t" class="word-cloud-semantics"></div>
+
+						  </td>
+					  </tr>
+						</table>
+
+						<table style="border:solid #CDCDCD 6px">
+						<tr   style=" background-color: #CDCDCD; border-bottom: 2px solid #CDCDCD">
+
+						<td><input value="<PF>" onclick="$('.form-control').val(value)" type="button"></td>
+						<td  >Pflanzen</td>
+						<td  >problemlos zu differenzieren</td>
+						<td  >Alpenblume, Rose</td>
+						</tr>
+						<tr>
+						  <td>
+							  <a onclick="show_word_cloud('sem_nom_pf','#word-cloud-sem_nom_pf')"
+								 href="#" data-toggle="tooltip" data-placement="right"
+								 data-content="blume, pflanze, orange, baum">
+								  Frequenzliste Nachlass
+							  </a>
+						  </td>
+							<td colspan="3">
+							  <div id="word-cloud-sem_nom_pf-closebtn" class="pull-right" style="display: none;"><button type="button" class="btn btn-xs" onclick="hide_word_cloud('#word-cloud-sem_nom_pf');"><span>&times;</span><span class="sr-only">Close</span></button></div>
+							  <div  id="word-cloud-sem_nom_pf" class="word-cloud-semantics"></div>
+
+						  </td>
+					  </tr>
+						</table>
+
+						<table style="border:solid #CDCDCD 6px">
+						<tr  style=" background-color: #CDCDCD; border-bottom: 2px solid #CDCDCD" >
+
+						<td><input value="<OBJ>" onclick="$('.form-control').val(value)" type="button"></td>
+						<td  >Objekte</td>
+						<td >räumlich ausgedehnte Konkreta (eigentliche Objekte), räumlich nicht ausgedehnte Konkreta (Stoffe), mit menschlichen Sinnen wahrnehmbare Konkreta, Lokativa, Formen</td>
+						<td  >Buch, Wasser, Licht, Decke, Viereck</td>
+						</tr>
+						<tr>
+
+						  <td>
+							  <a onclick="show_word_cloud('sem_nom_obj','#word-cloud-sem_nom_obj')"
+								 href="#" data-toggle="tooltip" data-placement="right"
+								 data-content="sagen, satz, wort, zeichen">
+								  Frequenzliste Nachlass
+							  </a>
+						  </td>
+							<td colspan="3">
+							  <div id="word-cloud-sem_nom_obj-closebtn" class="pull-right" style="display: none;"><button type="button" class="btn btn-xs" onclick="hide_word_cloud('#word-cloud-sem_nom_obj');"><span>&times;</span><span class="sr-only">Close</span></button></div>
+							  <div  id="word-cloud-sem_nom_obj" class="word-cloud-semantics"></div>
+
+						  </td>
+					  </tr>
+						</table>
+
+						<table style="border:solid #CDCDCD 6px">
+							<tr   style=" background-color: #CDCDCD; border-bottom: 2px solid #CDCDCD">
+
+						<td><input value="<ER>" onclick="$('.form-control').val(value)" type="button"></td>
+						<td  >Ereignisse</td>
+						<td  >zeitlich abgegrenzt, mit willenhaften Verursacher, Prozesse</td>
+						<td  >Konzert,Sprechen</td>
+					</tr>
+						<tr>
+						  <td>
+							  <a onclick="show_word_cloud('sem_nom_er','#word-cloud-sem_nom_er')"
+								 href="#" data-toggle="tooltip" data-placement="right"
+								 data-content="denken, verstehen, fragen, spiel ">
+								  Frequenzliste Nachlass
+							  </a>
+						  </td>
+							<td colspan="3">
+							  <div id="word-cloud-sem_nom_er-closebtn" class="pull-right" style="display: none;"><button type="button" class="btn btn-xs" onclick="hide_word_cloud('#word-cloud-sem_nom_er');"><span>&times;</span><span class="sr-only">Close</span></button></div>
+							  <div  id="word-cloud-sem_nom_er" class="word-cloud-semantics"></div>
+
+						  </td>
+					  </tr>
+					</table>
+
+						<table style="border:solid #CDCDCD 6px">
+							<tr>
+
+						<td><input value="<ZU>" onclick="$('.form-control').val(value)" type="button"></td>
+						<td  >Zustände</td>
+						<td  >keine temporale Struktur, veränderbar</td>
+						<td  >Freiheit, Wohlsein</td>
+					</tr>
+						<tr>
+						  <td>
+							  <a onclick="show_word_cloud('sem_nom_zu','#word-cloud-sem_nom_zu')"
+								 href="#" data-toggle="tooltip" data-placement="right"
+								 data-content="wohl, wirklichkeit, leben, rolle">
+								  Frequenzliste Nachlass
+							  </a>
+							  </td>
+							<td colspan="3">
+							  <div id="word-cloud-sem_nom_zu-closebtn" class="pull-right" style="display: none;"><button type="button" class="btn btn-xs" onclick="hide_word_cloud('#word-cloud-sem_nom_zu');"><span>&times;</span><span class="sr-only">Close</span></button></div>
+							  <div  id="word-cloud-sem_nom_zu" class="word-cloud-semantics"></div>
+
+						  </td>
+					  </tr>
+						</table>
+
+						<table style="border:solid #CDCDCD 6px">
+
+							<tr   style=" background-color: #CDCDCD; border-bottom: 2px solid #CDCDCD">
+
+						<td><input value="<EIG>" onclick="$('.form-control').val(value)" type="button"></td>
+						<td  >Eigenschaften</td>
+						<td  >unveränderbare Attribute von Entitäten</td>
+						<td  >Bildhaftigkeit, Breite</td>
+
+					</tr>
+						<tr>
+						  <td>
+							  <a onclick="show_word_cloud('sem_nom_eig','#word-cloud-sem_nom_eig')"
+								 href="#" data-toggle="tooltip" data-placement="right"
+								 data-content="wirklichkeit, gleiche, name, gleichung">
+								  Frequenzliste Nachlass
+							  </a>
+							  </td>
+							<td colspan="3">
+							  <div id="word-cloud-sem_nom_eig-closebtn" class="pull-right" style="display: none;"><button type="button" class="btn btn-xs" onclick="hide_word_cloud('#word-cloud-sem_nom_eig');"><span>&times;</span><span class="sr-only">Close</span></button></div>
+							  <div  id="word-cloud-sem_nom_eig" class="word-cloud-semantics"></div>
+
+						  </td>
+					  </tr>
+						</table>
+
+						<table style="border:solid #CDCDCD 6px">
+						<tr   style=" background-color: #CDCDCD; border-bottom: 2px solid #CDCDCD">
+
+						<td><input value="<TEMP>" onclick="$('.form-control').val(value)" type="button"></td>
+						<td  >Temporalia</td>
+						<td  >Zeitintervalle und - punkte</td>
+						<td  >Gegenwart, Minute</td>
+					</tr>
+						<tr>
+						  <td>
+							  <a onclick="show_word_cloud('sem_nom_temp','#word-cloud-sem_nom_temp')"
+								 href="#" data-toggle="tooltip" data-placement="right"
+								 data-content="ende, zukunft, vergangenheit, intervall">
+								  Frequenzliste Nachlass
+							  </a>
+							  </td>
+							<td colspan="3">
+							  <div id="word-cloud-sem_nom_temp-closebtn" class="pull-right" style="display: none;"><button type="button" class="btn btn-xs" onclick="hide_word_cloud('#word-cloud-sem_nom_temp');"><span>&times;</span><span class="sr-only">Close</span></button></div>
+							  <div  id="word-cloud-sem_nom_temp" class="word-cloud-semantics"></div>
+
+						  </td>
+					  </tr>
+					</table>
+
+						<table style="border:solid #CDCDCD 6px">
+						<tr  style=" background-color: #CDCDCD; border-bottom: 2px solid #CDCDCD" >
+
+						<td><input value="<EN>" onclick="$('.form-control').val(value)" type="button"></td>
+						<td >Eigennamen</td>
+						<td >problemlos zu differenzieren</td>
+						<td >Venus, Alpen</td>
+						</tr>
+						<tr>
+						  <td>
+							  <a onclick="show_word_cloud('sem_nom_en','#word-cloud-sem_nom_en')"
+								 href="#" data-toggle="tooltip" data-placement="right"
+								 data-content="w\u00e4re, will, russell, frege">
+								  Frequenzliste Nachlass
+							  </a>
+						  </td>
+							<td colspan="3">
+							  <div id="word-cloud-sem_nom_en-closebtn" class="pull-right" style="display: none;"><button type="button" class="btn btn-xs" onclick="hide_word_cloud('#word-cloud-sem_nom_en');"><span>&times;</span><span class="sr-only">Close</span></button></div>
+							  <div  id="word-cloud-sem_nom_en" class="word-cloud-semantics"></div>
+
+						  </td>
+					  </tr>
+						</table>
+
+						<table style="border:solid #CDCDCD 6px">
+
+						<tr style=" background-color: #CDCDCD; border-bottom: 2px solid #CDCDCD">
+						<td><input value="<NUM>" onclick="$('.form-control').val(value)" type="button"></td>
+						<td >Numeralia</td>
+						<td >Zahlworte</td>
+						<td >Primzahl, Acht</td>
+					</tr>
+						<tr>
+						  <td>
+							  <a onclick="show_word_cloud('sem_nom_num','#word-cloud-sem_nom_num')"
+								 href="#" data-toggle="tooltip" data-placement="right"
+								 data-content="zahl, zahlen, kardinalzahlen, eins">
+								  Frequenzliste Nachlass
+							  </a>
+						  </td>
+							<td colspan="3">
+							  <div id="word-cloud-sem_nom_num-closebtn" class="pull-right" style="display: none;"><button type="button" class="btn btn-xs" onclick="hide_word_cloud('#word-cloud-sem_nom_num');"><span>&times;</span><span class="sr-only">Close</span></button></div>
+							  <div  id="word-cloud-sem_nom_num" class="word-cloud-semantics"></div>
+
+						  </td>
+					  </tr>
+
+						</table>
+
+						<table style="border:solid #CDCDCD 6px">
+							<tr style=" background-color: #CDCDCD; border-bottom: 2px solid #CDCDCD">
+						<td><input value="<SONST>" onclick="$('.form-control').val(value)" type="button"></td>
+						<td>Diversa</td>
+						<td>Gefühle, Gedanken</td>
+						<td>Liebe, Aberglaube, Verhältnis</td>
+					</tr>
+						<tr>
+						  <td>
+							  <a onclick="show_word_cloud('sem_nom_sonst','#word-cloud-sem_nom_sonst')"
+								 href="#" data-toggle="tooltip" data-placement="right"
+								 data-content="aber, sprache, sinn,fall">
+								  Frequenzliste Nachlass
+							  </a>
+						  </td>
+							<td colspan="3">
+							  <div id="word-cloud-sem_nom_sonst-closebtn" class="pull-right" style="display: none;"><button type="button" class="btn btn-xs" onclick="hide_word_cloud('#word-cloud-sem_nom_sonst');"><span>&times;</span><span class="sr-only">Close</span></button></div>
+							  <div  id="word-cloud-sem_nom_sonst" class="word-cloud-semantics"></div>
+
+						  </td>
+					  </tr>
+						</table>
+
+						<table style="border:solid #CDCDCD 6px">
+
+
+							<tr style=" background-color: #CDCDCD; border-bottom: 2px solid #CDCDCD">
+						<td><input value="<COL>" onclick="$('.form-control').val(value)" type="button"></td>
+						<td>Farben</td>
+						<td>Farben nach Farbenlehre Wittgensteins, Unterkategorie: Grundfarbe, Zwischenfarbe, Transparenz, Glanz, Farbigkeit</td>
+						<td>rot, klar, blau, gelb, schwarz, rein, klar</td>
+					</tr>
+						<tr>
+						  <td>
+							  <a onclick="show_word_cloud('sem_adj_col','#word-cloud-sem_adj_col')"
+								 href="#" data-toggle="tooltip" data-placement="right"
+								 data-content="rot, klar, blau, gelb">
+								  Frequenzliste Nachlass
+							  </a>
+						  </td>
+							<td colspan="3">
+							  <div id="word-cloud-sem_adj_col-closebtn" class="pull-right" style="display: none;"><button type="button" class="btn btn-xs" onclick="hide_word_cloud('#word-cloud-sem_adj_col');"><span>&times;</span><span class="sr-only">Close</span></button></div>
+							  <div  id="word-cloud-sem_adj_col" class="word-cloud-semantics"></div>
+
+						  </td>
+					  </tr>
+						</table>
+						<table style="border:solid #CDCDCD 6px">
+
+							<tr style=" background-color: #CDCDCD; border-bottom: 2px solid #CDCDCD">
+						<td><input value="<NUM>" onclick="$('.form-control').val(value)" type="button"></td>
+						<td>Numeralia</td>
+						<td>quantitativ</td>
+						<td>zwei, erst, einzig, viel, weniger, zweite</td>
+					</tr>
+
+
+						<tr>
+
+						  <td>
+							  <a onclick="show_word_cloud('sem_adj_num','#word-cloud-sem_adj_num')"
+								 href="#" data-toggle="tooltip" data-placement="right"
+								 data-content="a, zwei, mehr, erst">
+								  Frequenzliste Nachlass
+							  </a>
+						  </td>
+							<td colspan="3">
+							  <div id="word-cloud-sem_adj_num-closebtn" class="pull-right" style="display: none;"><button type="button" class="btn btn-xs" onclick="hide_word_cloud('#word-cloud-sem_adj_num');"><span>&times;</span><span class="sr-only">Close</span></button></div>
+							  <div  id="word-cloud-sem_adj_num" class="word-cloud-semantics"></div>
+
+						  </td>
+					  </tr>
+						</table>
+
+						<table style="border:solid #CDCDCD 6px">
+
+							<tr style=" background-color: #CDCDCD; border-bottom: 2px solid #CDCDCD">
+						<td><input value="<REL>" onclick="$('.form-control').val(value)" type="button"></td>
+						<td>Relation</td>
+						<td>"auf ein Wort verweisend oder sich darauf beziehend"/ Fachsprache/ "wie"/ "aus"</td>
+						<td>physikalisch, wesentlich, kausal, grammatisch, sinnlos</td>
+					</tr>
+						<tr>
+						  <td>
+
+							  <a onclick="show_word_cloud('sem_adj_rel','#word-cloud-sem_adj_rel')"
+								 href="#" data-toggle="tooltip" data-placement="right"
+								 data-content="wirklich, wollen, wesentlich, grammatischen">
+								  Frequenzliste Nachlass
+							  </a>
+						  </td>
+							<td colspan="3">
+							  <div id="word-cloud-sem_adj_rel-closebtn" class="pull-right" style="display: none;"><button type="button" class="btn btn-xs" onclick="hide_word_cloud('#word-cloud-sem_adj_rel');"><span>&times;</span><span class="sr-only">Close</span></button></div>
+							  <div  id="word-cloud-sem_adj_rel" class="word-cloud-semantics"></div>
+
+						  </td>
+					  </tr>
+						</table>
+
+						<table style="border:solid #CDCDCD 6px">
+							<tr style=" background-color: #CDCDCD; border-bottom: 2px solid #CDCDCD">
+						<td><input value="<EN>" onclick="$('.form-control').val(value)" type="button"></td>
+						<td>Eigennamen</td>
+						<td>von Eigennamen abgeleitete Adjektive</td>
+						<td>Fermatsche, Skolemschen, Sheffersche, Eulerscher</td>
+					</tr>
+
+							<tr>
+						  <td>
+							  <a onclick="show_word_cloud('sem_adj_en','#word-cloud-sem_adj_en')"
+								 href="#" data-toggle="tooltip" data-placement="right"
+								 data-content="fermatschen, schopenhauerschen, hellenisch, sheffersche">
+								  Frequenzliste Nachlass
+							  </a>
+						  </td><td colspan="3">
+							  <div id="word-cloud-sem_adj_en-closebtn" class="pull-right" style="display: none;"><button type="button" class="btn btn-xs" onclick="hide_word_cloud('#word-cloud-sem_adj_en');"><span>&times;</span><span class="sr-only">Close</span></button></div>
+							  <div  id="word-cloud-sem_adj_en" class="word-cloud-semantics"></div>
+
+						  </td>
+					  </tr>
+						</table>
+
+						<table style="border:solid #CDCDCD 6px">
+							<tr style=" background-color: #CDCDCD; border-bottom: 2px solid #CDCDCD">
+						<td><input value="<TEMP>" onclick="$('.form-control').val(value)" type="button"></td>
+						<td>Temporalia</td>
+						<td>Zeitangaben</td>
+						<td>unmittelbar, ehe, lang, andermal, vorig, meist</td>
+					</tr>
+						<tr>
+						  <td>
+							  <a onclick="show_word_cloud('sem_adj_temp','#word-cloud-sem_adj_temp')"
+								 href="#" data-toggle="tooltip" data-placement="right"
+								 data-content="ehe, lang, unmittelbar, eher">
+								  Frequenzliste Nachlass
+							  </a>
+						  </td>
+							<td colspan="3">
+							  <div id="word-cloud-sem_adj_temp-closebtn" class="pull-right" style="display: none;"><button type="button" class="btn btn-xs" onclick="hide_word_cloud('#word-cloud-sem_adj_temp');"><span>&times;</span><span class="sr-only">Close</span></button></div>
+							  <div  id="word-cloud-sem_adj_temp" class="word-cloud-semantics"></div>
+
+						  </td>
+					  </tr>
+						</table>
+
+						<table style="border:solid #CDCDCD 6px">
+							<tr style=" background-color: #CDCDCD; border-bottom: 2px solid #CDCDCD">
+						<td><input value="<EVAL>" onclick="$('.form-control').val(value)" type="button"></td>
+						<td>Evaluation</td>
+						<td>Wertung des Betrachters/ Konnoatiton/ Subjektivität</td>
+						<td>falsch, richtig, wahr, einfach, genau</td>
+					</tr><tr>
+						  <td>
+							  <a onclick="show_word_cloud('sem_adj_eval','#word-cloud-sem_adj_eval')"
+								 href="#" data-toggle="tooltip" data-placement="right"
+								 data-content="falsch, richtig, wahr, einfach, genau">
+								  Frequenzliste Nachlass
+							  </a>
+						  </td>
+							<td colspan="3">
+							  <div id="word-cloud-sem_adj_eval-closebtn" class="pull-right" style="display: none;"><button type="button" class="btn btn-xs" onclick="hide_word_cloud('#word-cloud-sem_adj_eval');"><span>&times;</span><span class="sr-only">Close</span></button></div>
+							  <div  id="word-cloud-sem_adj_eval" class="word-cloud-semantics"></div>
+
+						  </td>
+					  </tr>
+						</table>
+
+						<table style="border:solid #CDCDCD 6px">
+
+							<tr style=" background-color: #CDCDCD; border-bottom: 2px solid #CDCDCD">
+						<td><input value="<ZU>" onclick="$('.form-control').val(value)" type="button"></td>
+						<td>Zustände</td>
+						<td>abgeschlossener/ definierbarer Zustand, Lokativa</td>
+						<td>ganz, wirklich, gegeben, gebraucht, gesagt, allgemein</td>
+					</tr><tr>
+						  <td>
+							  <a onclick="show_word_cloud('sem_adj_zu','#word-cloud-sem_adj_zu')"
+								 href="#" data-toggle="tooltip" data-placement="right"
+								 data-content="ganz, wirklich, gegeben, gebraucht">
+								  Frequenzliste Nachlass
+							  </a>
+						  </td>
+							<td colspan="3">
+							  <div id="word-cloud-sem_adj_zu-closebtn" class="pull-right" style="display: none;">
+								  <button type="button" class="btn btn-xs" onclick="hide_word_cloud('#word-cloud-sem_adj_zu');">
+									  <span>&times;</span><span class="sr-only">Close</span></button></div>
+							  <div  id="word-cloud-sem_adj_zu" class="word-cloud-semantics"></div>
+
+						  </td>
+					  </tr>
+						</table>
+
+						<table style="border:solid #CDCDCD 6px">
+
+
+							<tr style=" background-color: #CDCDCD; border-bottom: 2px solid #CDCDCD">
+						<td><input value="<KOMP>" onclick="$('.form-control').val(value)" type="button"></td>
+						<td>Komparativa</td>
+						<td>Ähnlichkeit/ Gleichheit/ Steigerung</td>
+						<td>anders, gleich, verschieden, analog, besser</td>
+					</tr><tr>
+						  <td>
+							  <a onclick="show_word_cloud('sem_adj_komp','#word-cloud-sem_adj_komp')"
+								 href="#" data-toggle="tooltip" data-placement="right"
+								 data-content="anders, gleich, verschieden, analog">
+								  Frequenzliste Nachlass
+							  </a>
+						  </td>
+							<td colspan="3">
+							  <div id="word-cloud-sem_adj_komp-closebtn" class="pull-right" style="display: none;">
+								  <button type="button" class="btn btn-xs" onclick="hide_word_cloud('#word-cloud-sem_adj_komp');">
+									  <span>&times;</span><span class="sr-only">Close</span></button></div>
+							  <div  id="word-cloud-sem_adj_komp" class="word-cloud-semantics"></div>
+
+						  </td>
+					  </tr>
+						</table>
+
+						<table style="border:solid #CDCDCD 6px">
+
+							<tr style=" background-color: #CDCDCD; border-bottom: 2px solid #CDCDCD">
+						<td><input value="<STIL>" onclick="$('.form-control').val(value)" type="button"></td>
+						<td >Stilistika</td>
+						<td >autorenspezifische Abstufungen</td>
+						<td >wohl, wirklich, bestimmt, klar, gewiß</td>
+					</tr><tr>
+						  <td>
+							  <a onclick="show_word_cloud('sem_adj_stil','#word-cloud-sem_adj_stil')"
+								 href="#" data-toggle="tooltip" data-placement="right"
+								 data-content="wohl, wirklich, bestimmt, klar">
+								  Frequenzliste Nachlass
+							  </a>
+						  </td><td colspan="3">
+							  <div id="word-cloud-sem_adj_stil-closebtn" class="pull-right" style="display: none;">
+								  <button type="button" class="btn btn-xs" onclick="hide_word_cloud('#word-cloud-sem_adj_stil');">
+									  <span>&times;</span><span class="sr-only">Close</span></button></div>
+							  <div  id="word-cloud-sem_adj_stil" class="word-cloud-semantics"></div>
+
+						  </td>
+					  </tr>
+						</table>
+						<table style="border:solid #CDCDCD 6px">
+							<tr  style=" background-color: #CDCDCD; border-bottom: 2px solid #CDCDCD">
+						<td><input value="<EIG>" onclick="$('.form-control').val(value)" type="button"></td>
+						<td>Eigenschaft</td>
+						<td>Eigenschaften, die Personen zugeschrieben werden</td>
+						<td>gebildet, ungeschickt,peinlich, selbstständig, gutwillig, naiv</td>
+					</tr><tr>
+						  <td>
+							  <a onclick="show_word_cloud('sem_adj_eig','#word-cloud-sem_adj_eig')"
+								 href="#" data-toggle="tooltip" data-placement="right"
+								 data-content="gebildet, ungeschickt, peinlich, selbststaendig">
+								  Frequenzliste Nachlass
+							  </a>
+						  </td><td colspan="3">
+							  <div id="word-cloud-sem_adj_eig-closebtn" class="pull-right" style="display: none;">
+								  <button type="button" class="btn btn-xs" onclick="hide_word_cloud('#word-cloud-sem_adj_eig');">
+									  <span>&times;</span><span class="sr-only">Close</span></button></div>
+							  <div  id="word-cloud-sem_adj_eig" class="word-cloud-semantics"></div>
+
+						  </td>
+					  </tr>
+						</table>
+						<table style="border:solid #CDCDCD 6px">
+
+							<tr style=" background-color: #CDCDCD; border-bottom: 2px solid #CDCDCD">
+						<td><input value="<ER>" onclick="$('.form-control').val(value)" type="button"></td>
+						<td>Ereignisse</td>
+						<td>nicht abgeschlossener Verlauf/ Handlung</td>
+						<td>unendlich, hinweisend, entsprechend,vorbereitend, folgend</td>
+					</tr><tr>
+
+						  <td>
+							  <a onclick="show_word_cloud('sem_adj_er','#word-cloud-sem_adj_er')"
+								 href="#" data-toggle="tooltip" data-placement="right"
+								 data-content="unendlich, hinweisend, entsprechend, vorbereitend">
+								  Frequenzliste Nachlass
+							  </a>
+						  </td><td></td><td colspan="2">
+							  <div id="word-cloud-sem_adj_er-closebtn" class="pull-right" style="display: none;">
+								  <button type="button" class="btn btn-xs" onclick="hide_word_cloud('#word-cloud-sem_adj_er');">
+									  <span>&times;</span><span class="sr-only">Close</span></button></div>
+							  <div  id="word-cloud-sem_adj_er" class="word-cloud-semantics"></div>
+
+						  </td>
+					  </tr>
+						</table>
+
+					</table>
+			  </div>
+			</div>
+        </div>
+    </div>
+    <!-- Syntaktische Wortkategorien (extrahiert mit Treetagger von Dr. H. Schmid, CIS) -->
+    <div class="card" id="panel7" style="border:1px solid gray">
+        <div class="card bg-secondary mt-2">
+				<a data-toggle="collapse" href="#collapseSeven" class="card-header help-class panel-headText-color" id="syntaktische_wort">Syntaktische Wortkategorien (extrahiert mit Treetagger von Dr. H. Schmid, CIS) </a>
+        </div>
+        <div id="collapseSeven" class=" collapse">
+            <div class="card-body">
+				<div class="table table-bordered">
+					<input title="syntaktische Wortkategorie Eigenname + sehen" value="[NE] sehen" onclick="$('.form-control').val(value)"  type="button">
+					<input title="syntaktische Wortkategorie Eigenname + beliebiges Wort + syntaktische Wortkategorie Eigenname" value="[NE] * [NE]" onclick="$('.form-control').val(value)"  type="button">
+					<input title="syntaktische Wortkategorie Eigenname + Verb" value="[NE] <V>" onclick="$('.form-control').val(value)"  type="button">
+					<input title="syntaktische Wortkategorie Eigenname + syntaktische Wortkategorie finites Verb" value="[NE] [VVFIN]" onclick="$('.form-control').val(value)"  type="button">
+					<input title="syntaktische Wortkategorie Eigenname + syntaktische Wortkategorie Verb" value="[NE] [V*]" onclick="$('.form-control').val(value)"  type="button">
+					<input title="syntaktische Wortkategorie Negationspartikel" value="[PTKNEG]" onclick="$('.form-control').val(value)"  type="button">
+				</div>
+
+			  <div >
+				<br>
+				<h3>POS - Beschreibung - Beispiele </h3>
+					<table style="border:solid #CDCDCD 6px">
+						<tbody>
+						<tr>
+						<td><input value=" [ADJA]" onclick="$('.form-control').val(value)" type="button"></td>
+						<td>attributives Adjektiv</td>
+						<td> [das] große  [Haus]</td>
+						</tr> <tr>
+						<td><input value=" [ADJD]" onclick="$('.form-control').val(value)" type="button"></td>
+						<td>adverbiales oder prädikatives Adjektiv</td>
+						<td> [er fährt] schnell,  [er ist] schnell</td>
+						</tr> <tr>
+						<td><input value=" [ADV]" onclick="$('.form-control').val(value)" type="button"></td>
+						<td>Adverb</td>
+						<td>schon, bald, noch</td>
+						</tr> <tr>
+						<td><input value=" [APPR]" onclick="$('.form-control').val(value)" type="button"></td>
+						<td>Präposition</td>
+						<td>in  [der Stadt], ohne  [mich]</td>
+						</tr> <tr>
+						<td><input value=" [APPRART]" onclick="$('.form-control').val(value)" type="button"></td>
+						<td>Präposition mit Artikel</td>
+						<td>im  [Haus], zur  [Sache]</td>
+						</tr> <tr>
+						<td><input value=" [APPO]" onclick="$('.form-control').val(value)" type="button"></td>
+						<td>Postposition</td>
+						<td> [ihm] zufolge,  [der Sache] wegen</td>
+						</tr> <tr>
+						<td><input value=" [APZR]" onclick="$('.form-control').val(value)" type="button"></td>
+						<td>Zirkumposition rechts</td>
+						<td> [von jetzt] an</td>
+						</tr> <tr >
+						<td><input value=" [ART]" onclick="$('.form-control').val(value)" type="button"></td>
+						<td>bestimmter oder unbestimmter Artikel</td>
+						<td>der, die, das, ein, eine</td>
+						</tr> <tr>
+						<td><input value=" [CARD]" onclick="$('.form-control').val(value)" type="button"></td>
+						<td>Kardinalzahl</td>
+						<td>zwei  [Männer],  [im Jahre] 1994</td>
+						</tr> <tr>
+						<td><input value=" [FM]" onclick="$('.form-control').val(value)" type="button"></td>
+						<td>Fremdsprachliches Material</td>
+						<td> [Er hat das mit "] a big fish  [" übersetzt]</td>
+						<td></td>
+						<td><a href=""  ></a></td> <td   ><a href=""  ></a></td>
+						</tr><tr>
+						<td><input value=" [ITJ]" onclick="$('.form-control').val(value)" type="button"></td>
+						<td>Interjektion</td>
+						<td>mhm, ach, tja</td>
+						</tr> <tr>
+						<td><input value=" [KOUI]" onclick="$('.form-control').val(value)" type="button"></td>
+						<td>unterordnende Konjunktion mit "zu" und Infinitiv</td>
+						<td>um  [zu leben], anstatt  [zu fragen]</td>
+						</tr> <tr>
+						<td><input value=" [KOUS]" onclick="$('.form-control').val(value)" type="button"></td>
+						<td>unterordnende Konjunktion mit Satz</td>
+						<td>weil, dass, damit, wenn, ob</td>
+						</tr> <tr  >
+						<td><input value=" [KON]" onclick="$('.form-control').val(value)" type="button"></td>
+						<td>nebenordnende Konjunktion</td>
+						<td>und, oder, aber</td>
+						</tr> <tr>
+						<td><input value=" [KOKOM]" onclick="$('.form-control').val(value)" type="button"></td>
+						<td>Vergleichspartikel, ohne Satz</td>
+						<td>als, wie</td>
+						</tr> <tr>
+						<td><input value=" [NN]" onclick="$('.form-control').val(value)" type="button"></td>
+						<td>normales Nomen</td>
+						<td>Tisch, Herr,  [das] Reisen</td>
+						</tr> <tr>
+						<td><input value=" [NE]" onclick="$('.form-control').val(value)" type="button"></td>
+						<td>Eigennamen</td>
+						<td>Hans, Hamburg, HSV</td>
+						</tr> <tr>
+						<td><input value=" [PDS]" onclick="$('.form-control').val(value)" type="button"></td>
+						<td>substituierendes Demonstrativpronomen</td>
+						<td>dieser, jener</td>
+						</tr> <tr>
+						<td><input value=" [PDAT]" onclick="$('.form-control').val(value)" type="button"></td>
+						<td  >attribuierendes Demonstrativpronomen</td>
+						<td  >jener  [Mensch]</td>
+						</tr> <tr  >
+
+						<td><input value=" [PIS]" onclick="$('.form-control').val(value)" type="button"></td>
+						<td>substituierendes Indefinitpronomen</td>
+						<td>keiner, viele, man, niemand</td>
+						</tr> <tr>
+						<td><input value=" [PIAT]" onclick="$('.form-control').val(value)" type="button"></td>
+						<td>attribuierendes Indefinitpronomen ohne Determiner</td>
+						<td>kein  [Mensch], irgendein  [Glas]</td>
+						</tr> <tr>
+						<td><input value=" [PIDAT]" onclick="$('.form-control').val(value)" type="button"></td>
+						<td>attribuierendes Indefinitpronomen mit Determiner</td>
+						<td> [ein] wenig  [Wasser],  [die] beiden  [Brüder]</td>
+						</tr> <tr>
+
+						<td><input value=" [PPER]" onclick="$('.form-control').val(value)" type="button"></td>
+						<td>irreflexives Personalpronomen</td>
+						<td>ich, er, ihm, mich, dir</td>
+						</tr> <tr>
+						<td><input value=" [PPOSS]" onclick="$('.form-control').val(value)" type="button"></td>
+						<td>substituierendes Possesivpronomen</td>
+						<td>meins, deiner</td>
+						</tr> <tr>
+						<td><input value=" [PPOSAT]" onclick="$('.form-control').val(value)" type="button"></td>
+						<td>attribuierendes Possesivpronomen</td>
+						<td>mein  [Buch], deine  [Mutter]</td>
+						</tr> <tr>
+						<td><input value=" [PRELS]" onclick="$('.form-control').val(value)" type="button"></td>
+						<td>substituierendes Relativpronomen</td>
+						<td> [der Hund,] der</td>
+						</tr> <tr >
+						<td><input value=" [PRELAT]" onclick="$('.form-control').val(value)" type="button"></td>
+						<td>attribuierendes Relativpronomen</td>
+						<td> [der Mann,] dessen  [Hund]</td>
+						</tr> <tr>
+						<td><input value=" [PRF]" onclick="$('.form-control').val(value)" type="button"></td>
+						<td>reflexives Personalpronomen</td>
+						<td>sich, einander, dich, mir</td>
+						</tr> <tr>
+
+						<td><input value=" [PWS]" onclick="$('.form-control').val(value)" type="button"></td>
+						<td  >substituierendes Interrogativpronomen</td>
+						<td  >wer, was</td>
+						</tr> <tr  >
+
+						<td><input value=" [PWAT]" onclick="$('.form-control').val(value)" type="button"></td>
+						<td  >attribuierendes Interrogativpronomen</td>
+						<td  >welche  [Farbe], wessen  [Hut]</td>
+						</tr> <tr  >
+
+						<td><input value=" [PWAV]" onclick="$('.form-control').val(value)" type="button"></td>
+						<td  >adverbiales Interrogativ- oder Relativpronomen</td>
+						<td  >warum, wo, wann, worüber, wobei</td>
+						</tr> <tr  >
+
+						<td><input value=" [PAV]" onclick="$('.form-control').val(value)" type="button"></td>
+						<td  >Pronominaladverb</td>
+						<td  >dafür, dabei, deswegen, trotzdem</td>
+						</tr> <tr  >
+
+						<td><input value=" [PTKZU]" onclick="$('.form-control').val(value)" type="button"></td>
+						<td  >"zu" vor Infinitiv</td>
+						<td  >zu  [gehen]</td>
+						</tr> <tr  >
+
+						<td><input value=" [PTKNEG]" onclick="$('.form-control').val(value)" type="button"></td>
+						<td  >Negationspartikel</td>
+						<td  >nicht</td>
+						</tr> <tr  >
+
+						<td><input value=" [PTKVZ]" onclick="$('.form-control').val(value)" type="button"></td>
+						<td  >abgetrennter Verbzusatz</td>
+						<td  > [er kommt] an,  [er fährt] rad</td>
+						</tr> <tr  >
+
+						<td><input value=" [PTKANT]" onclick="$('.form-control').val(value)" type="button"></td>
+						<td  >Antwortpartikel</td>
+						<td  >ja, nein, danke, bitte</td>
+						</tr> <tr  >
+
+						<td><input value=" [PTKA]" onclick="$('.form-control').val(value)" type="button"></td>
+						<td  >Partikel bei Adjektiv</td>
+						<td  >am  [schönsten], zu  [schnell]</td>
+						</tr> <tr  >
+
+						<td><input value=" [TRUNC]" onclick="$('.form-control').val(value)" type="button"></td>
+						<td  >Kompositions-Erstglied</td>
+						<td  >An-  [und Abreise]</td>
+						</tr> <tr  >
+
+						<td><input value=" [VVFIN]" onclick="$('.form-control').val(value)" type="button"></td>
+						<td  >finites Verb, voll</td>
+						<td  > [du] gehst,  [wir] kommen  [an]</td>
+						</tr> <tr  >
+
+						<td><input value=" [VVIMP]" onclick="$('.form-control').val(value)" type="button"></td>
+						<td  >Imperativ, voll</td>
+						<td  >komm  [!]</td>
+						</tr> <tr  >
+
+						<td><input value=" [VVINF]" onclick="$('.form-control').val(value)" type="button"></td>
+						<td  >Infinitiv, voll</td>
+						<td  >gehen, ankommen</td>
+						</tr> <tr  >
+
+						<td><input value=" [VVIZU]" onclick="$('.form-control').val(value)" type="button"></td>
+						<td  >Infinitiv mit "zu", voll</td>
+						<td  >anzukommen, loszulassen</td>
+						</tr> <tr  >
+
+						<td><input value=" [VAPP]" onclick="$('.form-control').val(value)" type="button"></td>
+						<td  >Partizip Perfekt, voll</td>
+						<td  >gegangen, angekommen</td>
+						</tr> <tr  >
+
+						<td><input value=" [VAFIN]" onclick="$('.form-control').val(value)" type="button"></td>
+						<td  >finites Verb, aux</td>
+						<td  > [du] bist,  [wir] werden</td>
+						</tr> <tr  >
+
+						<td><input value=" [VAIMP]" onclick="$('.form-control').val(value)" type="button"></td>
+						<td  >Imperativ, aux</td>
+						<td  >sei  [ruhig!]</td>
+						</tr> <tr  >
+
+						<td><input value=" [VAINF]" onclick="$('.form-control').val(value)" type="button"></td>
+						<td  >Infinitiv, aux</td>
+						<td  >werden, sein</td>
+						</tr> <tr  >
+
+						<td><input value=" [VAPP]" onclick="$('.form-control').val(value)" type="button"></td>
+						<td  >Partizip Perfekt, aux</td>
+						<td  >gewesen</td>
+						</tr> <tr  >
+
+						<td><input value=" [VMFIN]" onclick="$('.form-control').val(value)" type="button"></td>
+						<td  >finites Verb, modal</td>
+						<td  >dürfen</td>
+						</tr> <tr  >
+						<td><input value=" [VMINF]" onclick="$('.form-control').val(value)" type="button"></td>
+						<td  >Infinitiv, modal</td>
+						<td  >wollen</td>
+						</tr> <tr  >
+
+						<td><input value=" [VMPP]" onclick="$('.form-control').val(value)" type="button"></td>
+						<td  >Partizip Perfekt, modal</td>
+						<td  >gekonnt,  [er hat gehen] können</td>
+						</tr> <tr  >
+
+						<td><input value=" [XY]" onclick="$('.form-control').val(value)" type="button"></td>
+						<td  >Nichtwort, Sonderzeichen enthaltend</td>
+						<td  >3:7, H2O, D2XW3</td>
+						</tr> <tr  >
+
+						<td><input value=" [$,]" onclick="$('.form-control').val(value)" type="button"></td>
+						<td  >Komma</td>
+						<td  >,</td>
+						</tr> <tr  >
+
+						<td><input value=" [$.]" onclick="$('.form-control').val(value)" type="button"></td>
+						<td  >Satzbeendende Interpunktion</td>
+						<td  >.?!;:</td>
+						</tr> <tr  >
+
+						<td><input value=" [$(]" onclick="$('.form-control').val(value)" type="button"></td>
+						<td  >sonstige Satzzeichen; satzintern</td>
+						<td  >- [,]()</td>
+					  </tr>
+						</tbody>
+					</table>
+				</div>
+            </div>
+        </div>
+    </div>
+    <!-- suche mit Partikelverben -->
+    <div class="card" id="panel8" style="border:1px solid gray">
+        <div class="card bg-secondary mt-2">
+				<a data-toggle="collapse" href="#collapseEight" class="card-header help-class panel-headText-color" id="suche_mit_partikel">Suche mit Partikelverben</a>
+
+        </div>
+        <div id="collapseEight" class="collapse">
+            <div class="card-body">
+            	<div class="table table-bordered">
+					<input  title="findet auch: hängt ... zusammen" value="zusammenhängen" onclick="$('.form-control').val(value)"  type="button">
+					<input  title="findet auch: fällt ... ein" value="einfallen" onclick="$('.form-control').val(value)"  type="button">
+					<input  title="findet auch: fällt ... heraus" value="herausfallen" onclick="$('.form-control').val(value)"  type="button">
+					<input  title="findet auch: geht ... hervor" value="hervorgehen" onclick="$('.form-control').val(value)"  type="button">
+					<input  title="findet auch: teilt ... mit" value="mitteilen" onclick="$('.form-control').val(value)"  type="button">
+				</div>
+
+			<div>
+				<br>
+				<h3>Tag/ Verb - Beschreibung - Verbbeispiel - Partikelverbkonstruktion</h3>
+				<table style="border:solid #CDCDCD 6px">
+					<tbody>
+						<tr>
+						<td><input value="[PTKVZ]" onclick="$('.form-control').val(value)" type="button"></td>
+						<td  >POS: abgetrennter Verbzusatz</td>
+						<td  >zusammen[hängen]</td>
+						<td  >[hängt] ... zusammen</td>
+						<td   ><a href=""  ></a></td> <td ><a href=""  ></a></td>
+						</tr> <tr  >
+
+						<td><input value="<VPART>" onclick="$('.form-control').val(value)" type="button"></td>
+						<td>lexikalische Wortkategorie: Verbpartikel</td>
+						<td>Findet alle Verbpartikel</td>
+
+						<td><a href=""  ></a></td> <td ><a href=""  ></a></td>
+						</tr> <tr>
+
+						<td><input value="zusammenhängen" onclick="$('.form-control').val(value)" type="button"></td>
+						<td>Verb direkt</td>
+						<td>zusammenhängen</td>
+						<td>hängen unsre Gedanken mit den Gegenständen zusammen</td>
+						<td><a href=""  ></a></td> <td ><a href=""  ></a></td>
+						
+						<td><input value="aufgeben" onclick="$('.form-control').val(value)" type="button"></td>
+						<td>Verb direkt</td>
+						<td>aufgeben</td>
+						<td>gibt die Hypothese nur um einen immer höheren Preis auf </td>
+						<td><a href=""  ></a></td> <td ><a href=""  ></a></td>
+					  </tr>
+					</tbody>
+				</table>
+				</div>
+			</div>
+		</div>
+    </div>
+
+    <!-- Reguläre Ausdrücke -->
+    <div class="card" id="panel9" style="border:1px solid gray">
+        <div class="card bg-secondary mt-2">
+				<a data-toggle="collapse" href="#collapseNine" class="card-header help-class panel-headText-color" id="advanced_search_and_regex">Advanced Search mit UND und ODER Verknüpfungen und Regex</a>
+
+        </div>
+        <div id="collapseNine" class="collapse">
+            <div class="card-body">
+            	<div class="table table-bordered">
+					<input  title="Marsbewohner | Erde" value="Marsbewohner | Erde" onclick="$('.form-control').val(value)"  type="button">
+				</div>
+			<div>
+				<br>
+				<h3>Regulärer Ausdruck - Erklärung</h3>
+				<table style="border:solid #CDCDCD 6px">
+					<tbody>
+						<tr>
+						<td><input value="sagen * {1,3} Wort" onclick="$('.form-control').val(value)" type="button"></td>
+						<td  >Findet "sagen" gefolgt von 1-3 beliebigen Wörtern, gefolgt von Wort.</td>
+						</tr> 
+						<tr>
+						<td><input value="Mann | Frau" onclick="$('.form-control').val(value)" type="button"></td>
+						<td>Findet Vorkommen von entweder "Mann" ODER "Frau".</td>
+						</tr> 
+						<tr>
+						<td><input value="Marsbewohner | Erde" onclick="$('.form-control').val(value)" type="button"></td>
+						<td>Der ODER Operator kann auch innerhalb eines Satzes zwei Wörter finden</td>
+						</tr> 
+						<tr>
+						<td><input value="braucht '&' der" onclick="$('.form-control').val(value)" type="button"></td>
+						<td>Findet das buchstäblich gebrauchte "&" zwischen lex. Formen von "braucht und "der" </td>
+						</tr>		
+						<tr>
+						<td><input value="Sage & [NN]" onclick="$('.form-control').val(value)" type="button"></td>
+						<td>Findet das Wort "Sage" als Nomen.</td>
+						</tr>
+						<td><input value="groß & [AD*]" onclick="$('.form-control').val(value)" type="button"></td>
+						<td>Findet "groß" sowohl als attributives Adjektiv [ADJA], als auch als adverbiales oder prädikatives Adjektiv [ADJD]</td>
+						</tr>
+					</tbody>
+				</table>
+				</div>
+            </div>
+        </div>
+    </div>
+</div>
+	</div>
+	</div>
+	<!--  wird momentan disabled, April 2019 >
+	<div class="col-md-2 col-lg-2 hidden" style="" id="freqlist">
+					<a href="" id="download_json_button">
+						<button class="btn btn-secondary btn-sm pull-right" type="submit">Download</button>
+					</a>
+				<table id="freqlist_table" class="table table-bordered">
+          <tr>
+            <th colspan="2">Frequenzliste</th>
+          </tr>
+          <tr>
+						<th data-field="Wort" id="B_word">Wort</th>
+						<th data-field="Frequenz" id="B_freq">Frequenz</th>
+  		</tr>
+					</thead>
+					<tbody id="freqlist_tbody"></tbody>
+				</table>
+		</div>
+   <--->
+</div>
+</div>

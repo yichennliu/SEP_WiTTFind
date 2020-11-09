@@ -1,0 +1,795 @@
+<div class="row">
+<script>hide_motto();</script>
+  <div class="col-md-6" id="col-left">
+    <div class="card bg-secondary mt-2">
+      <div class="card-header panel-headText-color" id="sem_farben">Semantische Klassen für Adjektiven und Nomen - Farben <i class="fa fa-question-circle pull-right"></i> </div>
+
+      <ul class="list-group">
+        <li id="test" class="list-group-item">
+          <label class="checkbox-inline" id="color">
+            <input type="checkbox" class="mr-2" class="mr-2" value="<+COL>" id="chk1"
+                   onclick="show_value()" /> Farben
+          </label>
+          <small id="example0"><span>Beispiele für</span>
+            <a onclick="show_word_cloud('sem_adj_col','#word-cloud-farben')"
+               href="#" data-toggle="tooltip" data-placement="right"
+               data-content="rot, klar, gelb, schwarz" id="adj_und_nomen_adj">
+               &lt;ADJ&gt;
+            </a>
+            <a onclick="show_word_cloud('sem_nom_col','#word-cloud-farben')"
+               href="#" data-toggle="tooltip" data-placement="right"
+               title="Rot,Durchsichtigkeit,Orange,Farbton" id="adj_und_nomen_nom">
+               &lt;N&gt;
+            </a>
+          </small>
+          <div id="word-cloud-farben-closebtn" class="pull-right" style="display: none;"><button type="button" class="btn btn-xs" onclick="hide_word_cloud('#word-cloud-farben');"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button></div>
+          <div style="height: 350px; display: none;" id="word-cloud-farben" class="word-cloud-semantics"></div>
+        </li>
+
+        <li class="list-group-item">
+          <label class="radio-inline" id="groundcolor">
+            <input type="radio" class="mr-2" name="inlineRadioOptions0"
+                   value="<+Grundfarbe>" id="chk28"
+                   onclick="show_value()"> Grundfarbe
+          </label>
+          <small id="example1">&emsp;<span>Beispiele f&uuml;r</span>
+            <a onclick="show_word_cloud('sem_adj_col_gr','#word-cloud-grundfarben')"
+               href="#" data-toggle="tooltip" data-placement="right"
+               title="rot, blau, gelb, grün" id="farben_adj">
+              &lt;ADJ&gt;
+            </a>
+          </small>
+          <div id="word-cloud-grundfarben-closebtn" class="pull-right" style="display: none;"><button type="button" class="btn btn-xs" onclick="hide_word_cloud('#word-cloud-grundfarben');"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button></div>
+          <div style="height: 350px; display: none;" id="word-cloud-grundfarben" class="word-cloud-semantics"></div>
+        </li>
+
+        <li class="list-group-item">
+          <label class="radio-inline" id="color_between">
+            <input type="radio" class="mr-2" name="inlineRadioOptions0"
+                   value="<+Zwischenfarbe>" id="chk29"
+                   onclick="show_value()"> Zwischenfarbe
+          </label>
+          <small id="example2">&emsp;<span>Beispiele f&uuml;r</span>
+            <a onclick="show_word_cloud('sem_adj_col_z','#word-cloud-zwischenfarben')"
+               href="#" data-toggle="tooltip" data-placement="right"
+               title="schwarz, dunkel, hellrot" id="zwischen_farb_adj">
+              &lt;ADJ&gt;
+            </a>
+          </small>
+          <div id="word-cloud-zwischenfarben-closebtn" class="pull-right" style="display: none;"><button type="button" class="btn btn-xs" onclick="hide_word_cloud('#word-cloud-zwischenfarben');"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button></div>
+          <div style="height: 350px; display: none;" id="word-cloud-zwischenfarben" class="word-cloud-semantics"></div>
+        </li>
+
+        <li class="list-group-item">
+          <label class="radio-inline" id="transparent">
+            <input type="radio" class="mr-2" name="inlineRadioOptions0"
+                   value="<+Transparenz>" id="chk30"
+                   onclick="show_value()"> Transparenz
+          </label>
+          <small id="example3">&emsp;<span>Beispiele f&uuml;r</span>
+            <a  onclick="show_word_cloud('sem_adj_col_t','#word-cloud-transparenz')"
+               href="#" data-toggle="tooltip" data-placement="right"
+               title="klar, durchsichtig" id="transpar_adj">
+              &lt;ADJ&gt;
+            </a>
+          </small>
+          <div id="word-cloud-transparenz-closebtn" class="pull-right" style="display: none;"><button type="button" class="btn btn-xs" onclick="hide_word_cloud('#word-cloud-transparenz');"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button></div>
+          <div style="height: 350px; display: none;" id="word-cloud-transparenz" class="word-cloud-semantics"></div>
+        </li>
+
+        <li class="list-group-item">
+          <label class="radio-inline" id="glanz">
+            <input type="radio" class="mr-2" name="inlineRadioOptions0"
+                   value="<+Glanz>" id="chk31"
+                   onclick="show_value()"> Glanz
+          </label>
+          <small id="example4">&emsp;<span>Beispiele f&uuml;r</span>
+            <a  onclick="show_word_cloud('sem_adj_col_gl','#word-cloud-glanz')"
+               href="#" data-toggle="tooltip" data-placement="right"
+               title="matt" id="adj_glanz">
+              &lt;ADJ&gt;
+            </a>
+          </small>
+          <div id="word-cloud-glanz-closebtn" class="pull-right" style="display: none;"><button type="button" class="btn btn-xs" onclick="hide_word_cloud('#word-cloud-glanz');"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button></div>
+          <div style="height: 350px; display: none;" id="word-cloud-glanz" class="word-cloud-semantics"></div>
+        </li>
+
+        <li class="list-group-item">
+          <label class="radio-inline" id="colorness">
+            <input type="radio" class="mr-2" name="inlineRadioOptions0"
+                   value="<+Farbigkeit>" id="chk32"
+                   onclick="show_value()"> Farbigkeit
+          </label>
+          <small id="example5">&emsp;<span>Beispiele f&uuml;r</span>
+            <a  onclick="show_word_cloud('sem_adj_col_f','#word-cloud-farbigkeit')"
+               href="#" data-toggle="tooltip" data-placement="right"
+               title="farbig, bunt" id="farbig_adj">
+              &lt;ADJ&gt;
+            </a>
+          </small>
+          <div id="word-cloud-farbigkeit-closebtn" class="pull-right" style="display: none;"><button type="button" class="btn btn-xs" onclick="hide_word_cloud('#word-cloud-farbigkeit');"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button></div>
+          <div style="height: 350px; display: none;" id="word-cloud-farbigkeit" class="word-cloud-semantics"></div>
+        </li>
+      </ul>
+    </div>
+    <div class="card bg-secondary mt-2">
+      <div class="card-header panel-headText-color" id="sem_musik">Semantische Klassen für Musikbegriffe <i class="fa fa-question-circle pull-right"></i> </div>
+
+      <ul class="list-group">
+        <li class="list-group-item">
+          <label class="radio-inline" id="componists">
+            <input type="radio" class="mr-2" name="inlineRadioOptions0"
+                   value="<+KOMPONIST>" id="chk33"
+                   onclick="show_value()" /> Komponisten
+          </label>
+          <small id="example6">&emsp;<span>Beispiele f&uuml;r</span>
+            <a onclick="show_word_cloud('sem_komponisten','#word-cloud-komponisten')"
+               href="#" data-toggle="tooltip" data-placement="right"
+               data-content="Brahms, Bruckner" id="kompo_adj">
+               &lt;Komponisten&gt;
+            </a>
+            <a onclick="show_word_cloud('sem_con_komponisten','#word-cloud-komponisten')"
+               href="#" data-toggle="tooltip" data-placement="right"
+               data-content="Namn, Einheit" id="kontext">
+               &lt;Kontext&gt;
+            </a>
+            <a onclick="show_word_cloud('sem_con_stop_komponisten','#word-cloud-komponisten')"
+               href="#" data-toggle="tooltip" data-placement="right"
+               data-content="Namn, Einheit" id="kontext_stopwort">
+               &lt;Kontext mit Stopwörtern&gt;
+            </a>
+          </small>
+          <div id="word-cloud-komponisten-closebtn" class="pull-right" style="display: none;"><button type="button" class="btn btn-xs" onclick="hide_word_cloud('#word-cloud-komponisten');"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button></div>
+          <div style="height: 350px; display: none;" id="word-cloud-komponisten" class="word-cloud-semantics"></div>
+        </li>
+
+        <li class="list-group-item">
+          <label class="radio-inline" id="instruments">
+            <input type="radio" class="mr-2" name="inlineRadioOptions0"
+                   value="<+INSTRUMENT>" id="chk34"
+                   onclick="show_value()"> Instrumente
+          </label>
+          <small id="example7">&emsp;<span>Beispiele f&uuml;r</span>
+            <a onclick="show_word_cloud('sem_instrumente','#word-cloud-instrumente')"
+               href="#" data-toggle="tooltip" data-placement="right"
+               title="Pianola, Tasten" id="instrument">
+              &lt;Instrumente&gt;
+            </a>
+            <a onclick="show_word_cloud('sem_con_instrumente','#word-cloud-instrumente')"
+               href="#" data-toggle="tooltip" data-placement="right"
+               data-content="Namn, Einheit" id="kontext_instrument">
+               &lt;Kontext&gt;
+            </a>
+            <a onclick="show_word_cloud('sem_con_stop_instrumente','#word-cloud-instrumente')"
+               href="#" data-toggle="tooltip" data-placement="right"
+               data-content="Namn, Einheit" id="kontext_stopword">
+               &lt;Kontext mit Stopwörtern&gt;
+            </a>
+          </small>
+          <div id="word-cloud-instrumente-closebtn" class="pull-right" style="display: none;"><button type="button" class="btn btn-xs" onclick="hide_word_cloud('#word-cloud-instrumente');"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button></div>
+          <div style="height: 350px; display: none;" id="word-cloud-instrumente" class="word-cloud-semantics"></div>
+        </li>
+
+        <li class="list-group-item">
+          <label class="radio-inline" id="genus">
+            <input type="radio" class="mr-2" name="inlineRadioOptions0"
+                   value="<+GATTUNG>" id="chk35"
+                   onclick="show_value()"> Gattungen
+          </label>
+          <small id="example8">&emsp;<span>Beispiele f&uuml;r</span>
+            <a onclick="show_word_cloud('sem_gattung','#word-cloud-gattung')"
+               href="#" data-toggle="tooltip" data-placement="right"
+               title="Fuge, Suite" id="gattungen">
+              &lt;Gattungen&gt;
+            </a>
+            <a onclick="show_word_cloud('sem_con_gattung','#word-cloud-gattung')"
+               href="#" data-toggle="tooltip" data-placement="right"
+               data-content="Namn, Einheit" id="kontext_gattungen">
+               &lt;Kontext&gt;
+            </a>
+            <a onclick="show_word_cloud('sem_con_stop_gattung','#word-cloud-gattung')"
+               href="#" data-toggle="tooltip" data-placement="right"
+               data-content="Namn, Einheit" id="kontext_stop">
+               &lt;Kontext mit Stopwörtern&gt;
+            </a>
+          </small>
+          <div id="word-cloud-gattung-closebtn" class="pull-right" style="display: none;"><button type="button" class="btn btn-xs" onclick="hide_word_cloud('#word-cloud-gattung');"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button></div>
+          <div style="height: 350px; display: none;" id="word-cloud-gattung" class="word-cloud-semantics"></div>
+        </li>
+
+        <li class="list-group-item">
+          <label class="radio-inline" id="intervals">
+            <input type="radio" class="mr-2" name="inlineRadioOptions0"
+                   value="<+INTERVALLE>" id="chk36"
+                   onclick="show_value()"> Intervalle
+          </label>
+          <small id="example9">&emsp;<span>Beispiele f&uuml;r</span>
+            <a  onclick="show_word_cloud('sem_intervalle','#word-cloud-intervalle')"
+               href="#" data-toggle="tooltip" data-placement="right"
+               title="Quint, fifth, Oktav" id="interval">
+              &lt;Intervalle&gt;
+            </a>
+            <a onclick="show_word_cloud('sem_con_intervalle','#word-cloud-intervalle')"
+               href="#" data-toggle="tooltip" data-placement="right"
+               data-content="Namn, Einheit" id="interval_kontext">
+               &lt;Kontext&gt;
+            </a>
+            <a onclick="show_word_cloud('sem_con_stop_intervalle','#word-cloud-intervalle')"
+               href="#" data-toggle="tooltip" data-placement="right"
+               data-content="Namn, Einheit" id="interval_stop">
+               &lt;Kontext mit Stopwörtern&gt;
+            </a>
+          </small>
+          <div id="word-cloud-intervalle-closebtn" class="pull-right" style="display: none;"><button type="button" class="btn btn-xs" onclick="hide_word_cloud('#word-cloud-intervalle');"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button></div>
+          <div style="height: 350px; display: none;" id="word-cloud-intervalle" class="word-cloud-semantics"></div>
+        </li>
+
+        <li class="list-group-item">
+          <label class="radio-inline" id="composition">
+            <input type="radio" class="mr-2" name="inlineRadioOptions0"
+                   value="<+bezug_zu_komposition>" id="chk37"
+                   onclick="show_value()"> Bezug zu Komposition
+          </label>
+          <small id="example10">&emsp;<span>Beispiele f&uuml;r</span>
+            <a  onclick="show_word_cloud('sem_bezug_zu_komposition','#word-cloud-bezug_zu_komposition')"
+               href="#" data-toggle="tooltip" data-placement="right"
+               title="Blaue, Nothung" id="bezug_komposita">
+              &lt;Bezug zu Komposition&gt;
+            </a>
+            <a onclick="show_word_cloud('sem_con_bezug_zu_komposition','#word-cloud-bezug_zu_komposition')"
+               href="#" data-toggle="tooltip" data-placement="right"
+               data-content="Namn, Einheit" id="komposita_kontext">
+               &lt;Kontext&gt;
+            </a>
+            <a onclick="show_word_cloud('sem_con_stop_bezug_zu_komposition','#word-cloud-bezug_zu_komposition')"
+               href="#" data-toggle="tooltip" data-placement="right"
+               data-content="Namn, Einheit" id="kontext_stop_komposita">
+               &lt;Kontext mit Stopwörtern&gt;
+            </a>
+          </small>
+          <div id="word-cloud-bezug_zu_komposition-closebtn" class="pull-right" style="display: none;"><button type="button" class="btn btn-xs" onclick="hide_word_cloud('#word-cloud-bezug_zu_komposition');"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button></div>
+          <div style="height: 350px; display: none;" id="word-cloud-bezug_zu_komposition" class="word-cloud-semantics"></div>
+        </li>
+
+        <li class="list-group-item">
+          <label class="radio-inline" id="musical_concepts">
+            <input type="radio" class="mr-2" name="inlineRadioOptions0"
+                   value="<+sonstige_begriffe>" id="chk38"
+                   onclick="show_value()"> Sonstige musikalische Begriffe
+          </label>
+          <small id="example11">&emsp;<span>Beispiele f&uuml;r</span>
+            <a  onclick="show_word_cloud('sem_sonstige_begriffe','#word-cloud-sonstige_begriffe')"
+               href="#" data-toggle="tooltip" data-placement="right"
+               title="Form, spielen, Ton" id="sonstiges">
+              &lt;Sonstige Begriffe&gt;
+            </a>
+            <a onclick="show_word_cloud('sem_con_sonstige_begriffe','#word-cloud-sonstige_begriffe')"
+               href="#" data-toggle="tooltip" data-placement="right"
+               data-content="Namn, Einheit" id="sonst_kontext">
+              &lt;Kontext&gt;
+            </a>
+            <a onclick="show_word_cloud('sem_con_stop_sonstige_begriffe','#word-cloud-sonstige_begriffe')"
+               href="#" data-toggle="tooltip" data-placement="right"
+               data-content="Namn, Einheit" id="sonst_kon_stop">
+               &lt;Kontext mit Stopwörtern&gt;
+            </a>
+          </small>
+          <div id="word-cloud-sonstige_begriffe-closebtn" class="pull-right" style="display: none;"><button type="button" class="btn btn-xs" onclick="hide_word_cloud('#word-cloud-sonstige_begriffe');"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button></div>
+          <div style="height: 350px; display: none;" id="word-cloud-sonstige_begriffe" class="word-cloud-semantics"></div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="card bg-secondary mt-2">
+      <div class="card-header panel-headText-color" id="sem_adj">Semantische Klassen für Adjektive und Nomen <i class="fa fa-question-circle pull-right"></i> </div>
+      <ul class="list-group">
+        <li class="list-group-item">
+          <label class="checkbox-inline" id="numeral">
+            <input type="checkbox" class="mr-2" value="<+NUM>" id="chk2"
+                   onclick="show_value()" id="numerlia"> Numeralia
+          </label>
+          <small id="example12">&emsp;<span>Beispiele f&uuml;r</span>
+            <a onclick="show_word_cloud('sem_adj_num','#word-cloud-numeralia')"
+               href="#" data-toggle="tooltip" data-placement="right"
+               title="zwei, erst, einzig, viel, weniger, zweite" id="num_adj">
+              &lt;ADJ&gt;
+            </a>
+            <a onclick="show_word_cloud('sem_nom_num','#word-cloud-numeralia')"
+               href="#" data-toggle="tooltip" data-placement="right"
+               title="Primzahl, Acht" id="num_n">
+              &lt;N&gt;
+            </a>
+          </small>
+          <div id="word-cloud-numeralia-closebtn" class="pull-right" style="display: none;"><button type="button" class="btn btn-xs" onclick="hide_word_cloud('#word-cloud-numeralia');"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button></div>
+          <div style="height: 350px; display: none;" id="word-cloud-numeralia" class="word-cloud-semantics"></div>
+        </li>
+
+        <li class="list-group-item">
+          <label class="checkbox-inline" id="proper_name">
+            <input type="checkbox" class="mr-2" value="<+EN>" id="chk3"
+                   onclick="show_value()"> Eigennamen
+          </label>
+          <small id="example13">&emsp;<span>Beispiele f&uuml;r</span>
+            <a onclick="show_word_cloud('sem_adj_en','#word-cloud-eigennamen')"
+               href="#" data-toggle="tooltip" data-placement="right"
+               title="Fermatschen, Skolemschen, Sheffersche, Eulerscher" id="eigen_agj">
+              &lt;ADJ&gt;
+            </a>
+            <a onclick="show_word_cloud('sem_nom_en','#word-cloud-eigennamen')"
+               href="#" data-toggle="tooltip" data-placement="right"
+               title="Venus, Alpen" id="eigen_n">
+              &lt;N&gt;
+            </a>
+          </small>
+          <div id="word-cloud-eigennamen-closebtn" class="pull-right" style="display: none;"><button type="button" class="btn btn-xs" onclick="hide_word_cloud('#word-cloud-eigennamen');"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button></div>
+          <div style="height: 350px; display: none;" id="word-cloud-eigennamen" class="word-cloud-semantics"></div>
+        </li>
+
+        <li class="list-group-item">
+          <label class="checkbox-inline" id="temporals">
+            <input type="checkbox" class="mr-2" value="<+TEMP>" id="chk4"
+                   onclick="show_value()"> Temporalia
+          </label>
+          <small id="example14">&emsp;<span>Beispiele f&uuml;r</span>
+            <a onclick="show_word_cloud('sem_adj_temp','#word-cloud-temporalia')"
+               href="#" data-toggle="tooltip" data-placement="right"
+               title="unmittelbar, ehe, lang, andermal, vorig, meist" id="tempo_adj">
+              &lt;ADJ&gt;
+            </a>
+            <a onclick="show_word_cloud('sem_nom_temp','#word-cloud-temporalia')"
+               href="#" data-toggle="tooltip" data-placement="right"
+               title="Gegenwart, Minute" id="tempo_n">
+              &lt;N&gt;
+            </a>
+          </small>
+          <div id="word-cloud-temporalia-closebtn" class="pull-right" style="display: none;"><button type="button" class="btn btn-xs" onclick="hide_word_cloud('#word-cloud-temporalia');"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button></div>
+          <div style="height: 350px; display: none;" id="word-cloud-temporalia" class="word-cloud-semantics"></div>
+        </li>
+
+        <li class="list-group-item">
+          <label class="checkbox-inline" id="status">
+            <input type="checkbox" class="mr-2" value="<+ZU>" id="chk5"
+                   onclick="show_value()"> Zustände
+          </label>
+          <small id="example15">&emsp;<span>Beispiele f&uuml;r</span>
+            <a onclick="show_word_cloud('sem_adj_zu','#word-cloud-zustaende')"
+               href="#" data-toggle="tooltip" data-placement="right"
+               title="ganz, wirklich, gegeben, gebraucht, gesagt, allgemein" id="zustand_adj">
+              &lt;ADJ&gt;
+            </a>
+            <a onclick="show_word_cloud('sem_nom_zu','#word-cloud-zustaende')"
+               href="#" data-toggle="tooltip" data-placement="right"
+               title="Freiheit, Wohlsein" id="zustand_n">
+              &lt;N&gt;
+            </a>
+          </small>
+          <div id="word-cloud-zustaende-closebtn" class="pull-right" style="display: none;"><button type="button" class="btn btn-xs" onclick="hide_word_cloud('#word-cloud-zustaende');"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button></div>
+          <div style="height: 350px; display: none;" id="word-cloud-zustaende" class="word-cloud-semantics"></div>
+        </li>
+
+        <li class="list-group-item">
+          <label class="checkbox-inline" id="attribute">
+            <input type="checkbox" class="mr-2" value="<+EIG>" id="chk6"
+                   onclick="show_value()"> Eigenschaft
+          </label>
+          <small id="example16">&emsp;<span>Beispiele f&uuml;r</span>
+            <a onclick="show_word_cloud('sem_adj_eig','#word-cloud-eigenschaft')"
+               href="#" data-toggle="tooltip" data-placement="right"
+               title="gebildet, aufmerksam, verhalten, offen, gemein" id="eigenschaft_adj">
+              &lt;ADJ&gt;
+            </a>
+            <a onclick="show_word_cloud('sem_nom_eig','#word-cloud-eigenschaft')"
+               href="#" data-toggle="tooltip" data-placement="right"
+               title="Bildhaftigkeit, Breite" id="eigenschaft_n">
+              &lt;N&gt;
+            </a>
+          </small>
+          <div id="word-cloud-eigenschaft-closebtn" class="pull-right" style="display: none;"><button type="button" class="btn btn-xs" onclick="hide_word_cloud('#word-cloud-eigenschaft');"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button></div>
+          <div style="height: 350px; display: none;" id="word-cloud-eigenschaft" class="word-cloud-semantics"></div>
+        </li>
+
+        <li class="list-group-item">
+          <label class="checkbox-inline" id="events">
+            <input type="checkbox" class="mr-2" value="<+ER>" id="chk7"
+                   onclick="show_value()"> Ereignisse
+          </label>
+          <small id="example17">&emsp;<span>Beispiele f&uuml;r</span>
+            <a onclick="show_word_cloud('sem_adj_er','#word-cloud-ereignisse')"
+               href="#" data-toggle="tooltip" data-placement="right"
+               title="unendlich, hinweisend, entsprechend, vorbereitend, folgend" id="ereingnis_adj">
+              &lt;ADJ&gt;
+            </a>
+            <a onclick="show_word_cloud('sem_nom_er','#word-cloud-ereignisse')"
+               href="#" data-toggle="tooltip" data-placement="right"
+               title="Konzert,Sprechen" id="ereignis_n">
+              &lt;N&gt;
+            </a>
+          </small>
+          <div id="word-cloud-ereignisse-closebtn" class="pull-right" style="display: none;"><button type="button" class="btn btn-xs" onclick="hide_word_cloud('#word-cloud-ereignisse');"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button></div>
+          <div style="height: 350px; display: none;" id="word-cloud-ereignisse" class="word-cloud-semantics"></div>
+        </li>
+      </ul>
+    </div>
+    <div class="card bg-secondary mt-2">
+      <div class="card-header panel-headText-color" id="sem_nuradj">Semantische Klassen nur für Adjektive <i class="fa fa-question-circle pull-right"></i> </div>
+      <ul class="list-group">
+        <li class="list-group-item">
+          <label class="checkbox-inline" id="evaluation">
+            <input type="checkbox" class="mr-2" value="<+EVAL>" id="chk8"
+                   onclick="show_value()" > Evaluation
+          </label>
+          <small id="example18">&emsp;<span>Beispiele f&uuml;r</span>
+            <a onclick="show_word_cloud('sem_adj_eval','#word-cloud-evaluation')"
+               href="#" data-toggle="tooltip" data-placement="right"
+               title="falsch, richtig, wahr, einfach, genau" id="eva_adj">
+              &lt;ADJ&gt;
+            </a>
+          </small>
+          <div id="word-cloud-evaluation-closebtn" class="pull-right" style="display: none;"><button type="button" class="btn btn-xs" onclick="hide_word_cloud('#word-cloud-evaluation');"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button></div>
+          <div style="height: 350px; display: none;" id="word-cloud-evaluation" class="word-cloud-semantics"></div>
+        </li>
+
+        <li class="list-group-item">
+          <label class="checkbox-inline" id="relation">
+            <input type="checkbox" class="mr-2" value="<+REL>" id="chk9"
+                   onclick="show_value()"> Relation
+          </label>
+          <small id="example19">&emsp;<span>Beispiele f&uuml;r</span>
+            <a onclick="show_word_cloud('sem_adj_rel','#word-cloud-relation')"
+               href="#" data-toggle="tooltip" data-placement="right"
+               title="physikalisch, wesentlich, kausal, grammatisch, sinnlos" id="relate_adj">
+              &lt;ADJ&gt;
+            </a>
+          </small>
+          <div id="word-cloud-relation-closebtn" class="pull-right" style="display: none;"><button type="button" class="btn btn-xs" onclick="hide_word_cloud('#word-cloud-relation');"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button></div>
+          <div style="height: 350px; display: none;" id="word-cloud-relation" class="word-cloud-semantics"></div>
+        </li>
+
+        <li class="list-group-item">
+          <label class="checkbox-inline" id="comparitive">
+            <input type="checkbox" class="mr-2" value="<+KOMP>" id="chk10"
+                   onclick="show_value()"> Komparativa
+          </label>
+          <small id="example20">&emsp;<span>Beispiele f&uuml;r</span>
+            <a onclick="show_word_cloud('sem_adj_komp','#word-cloud-komparativa')"
+               href="#" data-toggle="tooltip" data-placement="right"
+               title="anders, gleich, verschieden, analog, besser" id="kompativ_adj">
+              &lt;ADJ&gt;
+            </a>
+          </small>
+          <div id="word-cloud-komparativa-closebtn" class="pull-right" style="display: none;"><button type="button"  class="btn btn-xs" onclick="hide_word_cloud('#word-cloud-komparativa');"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button></div>
+          <div style="height: 350px; display: none;" id="word-cloud-komparativa" class="word-cloud-semantics"></div>
+        </li>
+
+        <li class="list-group-item">
+          <label class="checkbox-inline" id="styling">
+            <input type="checkbox" class="mr-2" value="<+STIL>" id="chk11"
+                   onclick="show_value()"> Stilistika
+          </label>
+          <small id="example21"> &emsp;<span>Beispiele f&uuml;r</span>
+            <a onclick="show_word_cloud('sem_adj_stil','#word-cloud-stilistika')"
+               href="#" data-toggle="tooltip" data-placement="right"
+               title="wohl, wirklich, bestimmt, klar, gewiß" id="stilistika_adj">
+              &lt;ADJ&gt;
+            </a>
+          </small>
+          <div id="word-cloud-stilistika-closebtn" class="pull-right" style="display: none;"><button type="button" class="btn btn-xs" onclick="hide_word_cloud('#word-cloud-stilistika');"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button></div>
+          <div style="height: 350px; display: none;" id="word-cloud-stilistika" class="word-cloud-semantics"></div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="card bg-secondary mt-2">
+      <div class="card-header panel-headText-color" id="sem_noun">Semantische Klassen nur für Nomen <i class="fa fa-question-circle pull-right"></i> </div>
+      <ul class="list-group">
+        <li class="list-group-item">
+          <label class="checkbox-inline" id="humen">
+            <input type="checkbox" class="mr-2" value="<+HUM>" id="chk12"
+                   onclick="show_value()"> Menschen
+          </label>
+          <small id="example22"> &emsp;<span>Beispiele f&uuml;r</span>
+            <a onclick="show_word_cloud('sem_nom_hum','#word-cloud-menschen')"
+               href="#" data-toggle="tooltip" data-placement="right"
+               title="Advokat, Alchemist" id="menschen_n">
+              &lt;N&gt;
+            </a>
+          </small>
+          <div id="word-cloud-menschen-closebtn" class="pull-right" style="display: none;"><button type="button" class="btn btn-xs" onclick="hide_word_cloud('#word-cloud-menschen');"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button></div>
+          <div style="height: 350px; display: none;" id="word-cloud-menschen" class="word-cloud-semantics"></div>
+        </li>
+
+        <li class="list-group-item">
+          <label class="checkbox-inline" id="animals">
+            <input type="checkbox" class="mr-2" value="<+T>" id="chk13"
+                   onclick="show_value()"> Tiere
+          </label>
+          <small id="example23"> &emsp;<span>Beispiele f&uuml;r</span>
+            <a onclick="show_word_cloud('sem_nom_t','#word-cloud-tiere')"
+               href="#" data-toggle="tooltip" data-placement="right"
+               title="Hahn, Hirsch" id="tier_n">
+              &lt;N&gt;
+            </a>
+          </small>
+          <div id="word-cloud-tiere-closebtn" class="pull-right" style="display: none;"><button type="button" class="btn btn-xs" onclick="hide_word_cloud('#word-cloud-tiere');"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button></div>
+          <div style="height: 350px; display: none;" id="word-cloud-tiere" class="word-cloud-semantics"></div>
+        </li>
+
+        <li class="list-group-item">
+          <label class="checkbox-inline" id="plants">
+            <input type="checkbox" class="mr-2" value="<+PF>" id="chk14"
+                   onclick="show_value()"> Pflanzen
+          </label>
+          <small id="example24"> &emsp;<span>Beispiele f&uuml;r</span>
+            <a onclick="show_word_cloud('sem_nom_pf','#word-cloud-pflanzen')"
+               href="#" data-toggle="tooltip" data-placement="right"
+               title="Alpenblume, Rose" id="pflanz_n">
+              &lt;N&gt;
+            </a>
+          </small>
+          <div id="word-cloud-pflanzen-closebtn" class="pull-right" style="display: none;"><button type="button" class="btn btn-xs" onclick="hide_word_cloud('#word-cloud-pflanzen');"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button></div>
+          <div style="height: 350px; display: none;" id="word-cloud-pflanzen" class="word-cloud-semantics"></div>
+        </li>
+
+        <li class="list-group-item">
+          <label class="checkbox-inline" id="objects">
+            <input type="checkbox" class="mr-2" value="<+OBJ>" id="chk15"
+                   onclick="show_value()"> Objekte
+          </label>
+          <small id="example25"> <span>Beispiele f&uuml;r</span>
+            <a onclick="show_word_cloud('sem_nom_obj','#word-cloud-objekte')"
+               href="#" data-toggle="tooltip" data-placement="right"
+               title="Buch, Wasser, Lich, Decke, Viereck" id="objekt_n">
+              &lt;N&gt;
+            </a>
+          </small>
+          <div id="word-cloud-objekte-closebtn" class="pull-right" style="display: none;"><button type="button" class="btn btn-xs" onclick="hide_word_cloud('#word-cloud-objekte');"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button></div>
+          <div style="height: 350px; display: none;" id="word-cloud-objekte" class="word-cloud-semantics"></div>
+        </li>
+
+        <li class="list-group-item">
+          <label class="checkbox-inline" id="diversa">
+            <input type="checkbox" class="mr-2" value="<+SONST>" id="chk16"
+                   onclick="show_value()"> Diversa
+          </label>
+          <small id="example26"> <span>&emsp;Beispiele f&uuml;r</span>
+            <a onclick="show_word_cloud('sem_nom_sonst','#word-cloud-diversa')"
+               href="#" data-toggle="tooltip" data-placement="right"
+               title="Liebe, Aberglaube, Verhältnis, Mathematik, Grad, Tendenz" id="diversa_n">
+              &lt;N&gt;
+            </a>
+          </small>
+          <div id="word-cloud-diversa-closebtn" class="pull-right" style="display: none;"><button type="button" class="btn btn-xs" onclick="hide_word_cloud('#word-cloud-diversa');"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button></div>
+          <div style="height: 350px; display: none;" id="word-cloud-diversa" class="word-cloud-semantics"></div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- hidden panel, is only shown when '#col-right-main' is hidden-->
+    <div class="hidden" style="display:none;" id="col-right-secondary">
+      <div class="card">
+        <div class="card-header" id="kontextoption">Kontextoptionen</div>
+
+        <ul class="list-group">
+          <li class="list-group-item">
+            <label class="checkbox-inline" id="punctuation">
+              <input type="checkbox" class="mr-2" value=" <PUNCT> " id="chk17"
+                     onclick="show_value()"> Satzzeichen davor und danach
+            </label>
+          </li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-header" id="context_vor">Kontext davor</div>
+
+        <ul class="list-group">
+          <li class="list-group-item">
+            <label class="radio-inline" id="no_option">
+              <input type="radio" class="mr-2" name="inlineRadioOptions" value=""
+                     id="chk26" onclick="show_value()"> keine Auswahl
+            </label>
+          </li>
+
+          <li class="list-group-item">
+            <label class="radio-inline" id="any_word">
+              <input type="radio" class="mr-2" name="inlineRadioOptions"
+                     value=" <MOT> " id="chk18"
+                     onclick="show_value()"> beliebiges Wort
+            </label>
+          </li>
+
+          <li class="list-group-item">
+            <label class="radio-inline" id="adjective">
+              <input type="radio" class="mr-2" name="inlineRadioOptions"
+                     value=" ([ADJA] | [ADJD] ) " id="chk20"
+                     onclick="show_value()"> Adjektiv
+            </label>
+          </li>
+
+          <li class="list-group-item">
+            <label class="radio-inline" id="nouns">
+              <input type="radio" class="mr-2" name="inlineRadioOptions"
+                     value=" [NN] " id="chk22"
+                     onclick="show_value()"> Nomen
+            </label>
+          </li>
+
+          <li class="list-group-item">
+            <label class="radio-inline" id="verb">
+              <input type="radio" class="mr-2" name="inlineRadioOptions"
+                     value=" [VV] " id="chk24"
+                     onclick="show_value()"> Verb
+            </label>
+          </li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="card-header" id="kontext_after">Kontext danach</div>
+        <ul class="list-group">
+          <li class="list-group-item">
+            <label class="radio-inline" id="sinoption">
+              <input type="radio" class="mr-2" name="inlineRadioOptions2"
+                     value="" id="chk27"
+                     onclick="show_value()"> keine Auswahl
+            </label>
+          </li>
+
+          <li class="list-group-item">
+            <label class="radio-inline" id="anyword">
+              <input type="radio" class="mr-2" name="inlineRadioOptions2"
+                     value=" <MOT> " id="chk19"
+                     onclick="show_value()"> beliebiges Wort
+            </label>
+          </li>
+
+          <li class="list-group-item">
+            <label class="radio-inline" id="adj">
+              <input type="radio" class="mr-2" name="inlineRadioOptions2"
+                     value=" ([ADJA] | [ADJD] ) " id="chk21"
+                     onclick="show_value()"> Adjektiv
+            </label>
+          </li>
+
+          <li class="list-group-item">
+            <label class="radio-inline" id="nomen">
+              <input type="radio" class="mr-2" name="inlineRadioOptions2"
+                     value=" [NN] " id="chk23"
+                     onclick="show_value()"> Nomen
+            </label>
+          </li>
+
+          <li class="list-group-item">
+            <label class="radio-inline" id="verb2">
+              <input type="radio" class="mr-2" name="inlineRadioOptions2"
+                     value=" [VV] " id="chk25"
+                     onclick="show_value()"> Verb
+            </label>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6 col-lg-3 hidden" style="" id="freqlist">
+      <table id="freqlist_table" class="table table-bordered">
+        <thead>
+          <tr>
+            <th colspan="2">Frequenzliste</th>
+          </tr>
+          <tr>
+            <th id="word"  data-field="Wort">Wort</th>
+            <th id="frequency" data-field="Frequenz">Frequenz</th>
+          </tr>
+        </thead>
+        <tbody id="freqlist_tbody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="col-md-6" id="col-right-main">
+    <div class="card bg-secondary mt-2">
+      <div class="card-header panel-headText-color" id="sem_kontextoption">Kontextoptionen<i class="fa fa-question-circle pull-right"></i></div>
+
+      <ul class="list-group">
+        <li class="list-group-item">
+          <label class="checkbox-inline" id="punct_before_after">
+            <input type="checkbox" class="mr-2" value=" <PUNCT> " id="chk17"
+                   onclick="show_value()"> Satzzeichen davor und danach
+          </label>
+        </li>
+      </ul>
+    </div>
+
+    <div class="card bg-secondary mt-2">
+      <div class="card-header panel-headText-color" id="kontext_davor">Kontext davor<i class="fa fa-question-circle pull-right"></i></div>
+
+      <ul class="list-group">
+        <li class="list-group-item">
+          <label class="radio-inline" id="option_no">
+            <input type="radio" class="mr-2" name="inlineRadioOptions" value=""
+                   id="chk26" onclick="show_value()"> keine Auswahl
+          </label>
+        </li>
+
+        <li class="list-group-item">
+          <label class="radio-inline" id="belibiges_w">
+            <input type="radio" class="mr-2" name="inlineRadioOptions"
+                   value=" <MOT> " id="chk18"
+                   onclick="show_value()"> beliebiges Wort
+          </label>
+        </li>
+
+        <li class="list-group-item">
+          <label class="radio-inline" id="addj">
+            <input type="radio" class="mr-2" name="inlineRadioOptions"
+                   value=" ([ADJA] | [ADJD] ) " id="chk20"
+                   onclick="show_value()"> Adjektiv
+          </label>
+        </li>
+
+        <li class="list-group-item">
+          <label class="radio-inline" id="nounn">
+            <input type="radio" class="mr-2" name="inlineRadioOptions"
+                   value=" [NN] " id="chk22"
+                   onclick="show_value()"> Nomen
+          </label>
+        </li>
+
+        <li class="list-group-item">
+          <label class="radio-inline" id="v">
+            <input type="radio" class="mr-2" name="inlineRadioOptions"
+                   value=" [VV] " id="chk24"
+                   onclick="show_value()"> Verb
+          </label>
+        </li>
+      </ul>
+    </div>
+
+    <div class="card bg-secondary mt-2">
+      <div class="card-header panel-headText-color " id="kotext_danach">Kontext danach <i class="fa fa-question-circle pull-right"></i></div>
+
+      <ul class="list-group">
+        <li class="list-group-item">
+          <label class="radio-inline" id="keine_a">
+            <input type="radio" class="mr-2" name="inlineRadioOptions2"
+                   value="" id="chk27"
+                   onclick="show_value()"> keine Auswahl
+          </label>
+        </li>
+
+        <li class="list-group-item">
+          <label class="radio-inline" id="belibig">
+            <input type="radio" class="mr-2" name="inlineRadioOptions2"
+                   value=" <MOT> " id="chk19"
+                   onclick="show_value()"> beliebiges Wort
+          </label>
+        </li>
+
+        <li class="list-group-item">
+          <label class="radio-inline" id="adjektiv">
+            <input type="radio" class="mr-2" name="inlineRadioOptions2"
+                   value=" ([ADJA] | [ADJD] ) " id="chk21"
+                   onclick="show_value()"> Adjektiv
+          </label>
+        </li>
+
+        <li class="list-group-item">
+          <label class="radio-inline" id="nommen">
+            <input type="radio" class="mr-2" name="inlineRadioOptions2"
+                   value=" [NN] " id="chk23"
+                   onclick="show_value()"> Nomen
+          </label>
+        </li>
+
+        <li class="list-group-item">
+          <label class="radio-inline" id="vv">
+            <input type="radio" class="mr-2" name="inlineRadioOptions2"
+                   value=" [VV] " id="chk25"
+                   onclick="show_value()"> Verb
+          </label>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+

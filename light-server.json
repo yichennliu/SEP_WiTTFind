@@ -1,0 +1,6 @@
+{
+  "bind": "localhost",
+  "open": true,
+  "port": 8080,
+  "serve": "."
+}

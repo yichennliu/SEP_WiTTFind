@@ -1,0 +1,9 @@
+denken: 1
+ich: 1
+machen: 1
+mensch: 1
+ob: 1
+schumann: 1
+sehnsucht: 1
+unerfüllt: 1
+wahnsinnig: 1

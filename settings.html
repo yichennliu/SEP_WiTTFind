@@ -1,0 +1,50 @@
+<div class="modal fade" id="settingsModal" tabindex="-1" role="dialog" aria-labelledby="settingsModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="settingsModalLabel">Einstellungen</h4>
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+      </div>
+      <div class="modal-body">
+        <div class="panel panel-default">
+          <div class="panel-heading" id="readerundsuche">Reader und Suche</div>
+          <div class="panel-body">
+            <p id="einstellen">Einstellungen für WiTTReader und die Suche können hier vorgenommen werden!</p>
+          </div>
+          <ul class="list-group" id="list-group-reader-search">
+            <li class="list-group-item">
+              <label class="checkbox-inline">
+                <input type="checkbox" id="show_facsimile_remarks"> Faksimile in den Bemerkungen anzeigen
+              </label>
+            </li>
+            <li class="list-group-item">
+              <label class="checkbox-inline">
+                <input type="checkbox" id="show_transcription_remarks"> Transkription der Bemerkungen (sofort) anzeigen
+              </label>
+            </li>
+            <li class="list-group-item">
+              Anzahl der Treffer pro Seite:
+              <select name="items_per_page_steps" id="items_per_page_steps">
+              </select>
+            </li>
+            <li class="list-group-item">
+              Zoomfaktor der Lupe:
+              <select name="zoom_factor" id="zoom_factor">
+              </select>
+            </li>
+            <li class="list-group-item">
+                Sprache:
+                <select name="lang_setting" id="lang_setting">
+                </select>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" id="end">Beenden</button>
+        <button type="button" class="btn btn-primary" id="save_me">Speichern</button>
+      </div>
+    </div>
+  </div>
+</div>

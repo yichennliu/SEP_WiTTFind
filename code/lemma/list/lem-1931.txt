@@ -1,0 +1,14 @@
+ausführen: 1
+für: 1
+geist: 1
+ich: 1
+machen: 1
+müssen: 1
+nichts: 1
+richtig: 1
+solange: 1
+verkrampft: 1
+verstehen: 1
+üben: 1
+überhaupt: 1
+übrigens: 1

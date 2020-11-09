@@ -1,0 +1,13 @@
+selbst: 2
+auszehren: 1
+bedürfnis: 1
+danach: 1
+ekelhaft: 1
+kommen: 1
+mensch: 1
+mir: 1
+schwung: 1
+trübselig: 1
+töten: 1
+ungeheuer: 1
+zurücken: 1

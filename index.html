@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="images/Wittgenstein_LMU.ico" type="image/x-icon">
+
+    <title>WiTTFind - CISWAB - Nachlass</title>
+    <!-- Wittgenstein LMU Icon eingefügt -->
+    <link rel="shortcut icon" type="image/x-icon" href="images/Wittgenstein_LMU.ico">
+
+    <link rel="stylesheet" type="text/css" href="components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="components/jquery-ui-dist/jquery-ui.min.css">
+
+    <link rel="stylesheet" type="text/css" href="include/wittfind.css">
+    <link rel="stylesheet" type="text/css" href="components/font-awesome/css/font-awesome.min.css" >
+    <link rel="stylesheet" type="text/css" href="components/c3/c3.min.css" >
+
+	<!-- css for semantics.html -->
+  <link rel="stylesheet" type="text/css" href="include/semantics.css" >
+  <script type="text/javascript" src="wittsim-control.js"></script>
+  
+
+    <!-- ES6 promise support for IE - see compatibility table:
+      https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Promise#Browser_compatibility
+    -->
+
+    <script src="node_modules/es6-promise/dist/es6-promise.min.js"></script>
+    <script src="node_modules/striptags/src/striptags.js"></script>
+
+    <script data-main="include/main" src="node_modules/requirejs/require.js"></script>
+  </head>
+  <body>
+    <div class="nav-examples">
+      <a class="nav-link" href="?help" id="example"><span>Beispiele</span></a>
+    </div>
+    <div class="language-settings">
+        <a class="nav-lang" id="DE" style="display:none;" onclick="changeLangImmediately('Deutsch');"><img border="0" alt="DE"
+        src="images/wiki_de.svg" width="24px" height="19"></a>
+        <a class="nav-lang" id="EN" style="display:none;" onclick="changeLangImmediately('English');"><img border="0" alt="EN" src="images/wiki_en.svg" width="24px" height="19"></a>
+    </div>
+    <div class="navbar-wrapper fixed-top">
+      <div class="navbar-sm" id="navigation">
+        <nav class="navbar navbar-sm p-0" role="navigation">
+          <div id="banner" role="banner">
+            <a href="http://wab.uib.no/" class="branding branding-left" aria-label="Wittgenstein Archives at University of Bergen"><span class="tooltiptext" style="left:40px;">Wittgenstein Archives at the University of Bergen (WAB)</span></a>
+            <a href="/" class="branding branding-center" aria-label="Main page"><span class="tooltiptext" style="width:70%;left:15%;">A cooperation between the Wittgenstein Archives at the University of Bergen (WAB) under the direction of Alois Pichler and the Center for Information and Language Processing at the Ludwig-Maximilians-University in Munich (CIS) under the direction of Max Hadersbeck</span></a>
+            <a href="http://www.cis.uni-muenchen.de/index.html" class="branding branding-right" aria-label="CIS, LMU Munich"><span class="tooltiptext" style="right:40px;">Center for Information and Language Processing at the Ludwig-Maximilians-University in Munich (CIS)</span></a>
+          </div>
+        </nav>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-0" role="navigation">
+          <button type="button" class="navbar-toggler navbar-toggler-right" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+            <div class="navbar-collapse collapse" id="navbar">
+             <ul class="navbar-nav w-100">
+                <div class="nav-item" id="nav_index"><a class="nav-link" href="index.html" id="regel_find">Regelbasiertes Finden</a></div>
+                <!-- <div class="nav-item" id="nav_semantics"><a class="nav-link" href="?semantics" id="sem_datareload">Semantisches Finden</a></div> -->
+                <div id="nav_code" class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown-semantic" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Semantisches Finden</a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="?semantics" id="sem_datareload-farben">Farben & Musik</a>
+                    <a class="dropdown-item" href="?similarity" id="wittsim">WittSim</a>
+                  </div>
+                </div>
+                <div id="nav_code" class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Geheimschrift</a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="?translator" id="datareload">Übersetzer</a>
+                    <a class="dropdown-item" href="code/bigrams/bi-1916.html" target="_blank" id="bigram">Bigramme</a>
+                  </div>
+                </div>
+                <!--<li role="presentation" id="nav_graph"><a href="?graph">Graphisches Finden</a></li>-->
+                <div class="nav-item" id="nav_reader"><a class="nav-link" target="_blank">Faksimile-Reader</a></div>
+                <div class="nav-item" id="nav_odysseereader"><a class="nav-link" target="_blank">Odyssee-Reader</a></div>
+                <div class="nav-item" id="nav_transcriptions"><a class="nav-link" href="http://wab.uib.no/transform/wab.php?modus=opsjoner" target="_blank" id="transcription">Transkriptionen</a></div>
+                <div class="nav-item dropdown ml-auto">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-bars" id="nav-setting-bars"></i></a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown2" style="margin-left: -130px;">
+                      <a class="dropdown-item" href="http://www.cis.uni-muenchen.de/dighum/wast-project/index.html" target="_blank" id="info"><span class=" fa fa-info-circle"></span>&nbsp;<span>Info</span></a>
+                      <a class="dropdown-item" href="?changelog" id="changelog"><span class="fa fa-random"></span><span>Changelog</span></a>
+                      <div class="dropdown-divider"></div>
+                      <!-- <a class="dropdown-item" href="?help" id="example"><span class="fa fa-pencil"></span>&nbsp;<span>Beispiele</span></a> -->
+                      <a class="dropdown-item" href="?tutorial" id="tutorial"><span class="fa fa-video-camera"></span>&nbsp;<span>Video-Tutorial</span></a>
+                      <a class="dropdown-item" href="?feedback" id="feedback"><span class="fa fa-comment"></span>&nbsp;<span>Feedback</span></a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" onclick="show_settings_dialog()" href="#" id="set"><span class="fa fa-cog"></span>&nbsp;<span>Einstellungen</span></a>
+                    </div>
+                </div>
+              </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row pt-4 justify-content-center">
+        <div class="col-lg-6 col-md-6 col-sm-6">
+	<form class="form-search" role="search">
+            <div class="input-group">
+              <input type="text" id='typeahead' autocomplete="off" class="form-control" placeholder="Suche..." name="pattern" autofocus>
+              <div class="input-group-append">
+                <button id="search_button" type="submit" class="btn btn-secondary">Suchen</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div> <!--row-->
+      <div class="d-flex flex-row mt-4 slider-container justify-content-center">
+      </div>
+      <div class="row slider-alert-container justify-content-center">
+      </div>
+
+	<div id="hit-sorting" class="row" style="visibility: visible">
+		<div class="col slider-option mt-4 justify-content-right" align="right">
+			<select id="hit-sort-select" class="sort-select">
+				<option value="date-sort">Treffer sortiert nach Datum (Default)</option>
+				<option value="rank-sort">Treffer sortiert nach Rank</option>
+				<option value="doc-sort">Treffer sortiert nach Dokument</option>
+			</select>
+		</div>
+	</div>
+
+
+      <span id="motto" style="visibility: visible">
+            <p class="text-center pt-4">
+            The FinderApp WiTTFind is work in progress (WIP). <br/>
+            Its normalized text representation is based on "CISWAB-XML" which is automatically generated from WAB’s XML transcriptions of the Wittgenstein Nachlass, and its facsimile representations are semi-automatically extracted from WAB’s Bergen Nachlass Edition of the Wittgenstein Nachlass.<br/></p>
+            <p class="text-center">To say it with the words of Ludwig Wittgenstein in MS104:<br/>
+            <b>WiTTFind ..."ist also kein Lehrbuch. – Sein Zweck wäre erreicht, wenn es Einem, der es mit Verständnis liest Vergnügen bereitete"<br/> </b><img src="images/zweck_erreicht.png" align="center" class="mw-100" height="94" width="585"></p>
+            <p>&nbsp;</p>
+      </span>
+
+      <div class="row" id="page_content">
+        <div class="main2 col-12">
+          <div class="help" ng-controller="MainCtrl"></div>
+          <div class="graph"></div>
+          <div class="semantics"></div>
+          <div class="similarity"></div>
+          <div class="translator"></div>
+          <div class="tutorial"></div>
+          <div class="feedback"></div>
+          <div class="changelog"></div>
+          <div style="height: 350px; position: relative; display: none;" id="word-cloud" class="canvas"></div>
+          <div class="number-hits"></div>
+          <div class="results"></div>
+          <div class="col-md-12 text-center" id="pages"></div>
+		  <footer class="footer" id="footer">
+            <div class="container">
+              <div class="text-muted text-center">
+                  <span>
+                    All rights reserved. © The Master and Fellows of Trinity College, Cambridge; The University of Bergen, Bergen.
+                  </span>
+                  <span>
+                    Reproduced by permission of The Master and Fellows of Trinity College, Cambridge, and the University of Bergen, Bergen.
+                  </span>
+                <p>
+                  A cooperation between the Wittgenstein Archives at the University of Bergen (WAB) under the direction of Alois Pichler and the Center for Information and Language Processing at the Ludwig-Maximilians-University in Munich (CIS) under the direction of Max Hadersbeck. <br/>
+                  Studentresearch within our project is supported from LEHRE@LMU <img src="images/lehre_lmu.jpg" height="36" width="36">
+                </p>
+               </div>
+            </div>
+          </footer>
+        </div> <!--col9-->
+      </div> <!--row-->
+    </div> <!--container-->
+    <div class="settings"></div>
+  <script src="/__lightserver__/reload-client.js"></script></body>
+</html>

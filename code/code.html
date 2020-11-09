@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>WiTTFind &#x2014; CIS&#x2215;WAB 2017</title>
+    <link rel="stylesheet" type="text/css" href="components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="include/wittfind.css">
+
+    <script data-main="include/main" src="components/requirejs-bower/require.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="logo">
+        <img src="images/wittgenstein2.jpg" usemap="#map" class="img-responsive center-block" >
+        <map name="map">
+          <area shape="circle" coords="45,41,40" href="http://wab.uib.no"/>
+          <area shape="circle" coords="1155,42,60" href="http://www.cis.uni-muenchen.de/index.html"/>
+        </map>
+      </div>
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-left">
+            <li role="presentation" id="nav_index"><a href="index.html">Regelbasiertes Finden</a></li>
+            <li role="presentation" id="nav_semantics"><a href="?semantics">Semantisches Finden</a></li>
+            <li class="dropdown">
+              <a href="#" data-toggle="dropdown" class="dropdown-toggle">Geheimschrift</a>
+              <ul class="dropdown-menu">
+                  <li><a href="?translator">Übersetzer</a></li>
+                  <li><a href="code/index.html" target="_blank">Analysen</a></li>
+              </ul>
+            </li>
+            <li role="presentation" id="nav_graph"><a href="?graph">Graphisches Finden</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a href="#" data-toggle="dropdown" class="dropdown-toggle">Hilfe und Einstellungen</a>
+              <ul class="dropdown-menu">
+                <li><a href="http://www.cis.uni-muenchen.de/dighum/research-group-co/index.html" target="_blank">Info</a></li>
+                <li><a href="http://wast.cis.uni-muenchen.de/changelog/" target="_blank">Changelog</a></li>
+                <li class="divider"></li>
+                <li><a href="?help">Beispiele</a></li>
+                <li><a href="?tutorial">Video-Tutorial</a></li>
+                <li><a href="?feedback">Feedback</a></li>
+                <li class="divider"></li>
+                <li><a onclick="show_settings_dialog()" href="#">Einstellungen</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li class="active"></li>
+          </ul>
+        </div>
+        <div class="col-sm-9 col-sm-offset-5 col-md-9 col-md-offset-2 main">
+
+          <div class="help" ng-controller="MainCtrl"></div>
+          <div class="graph"></div>
+          <div class="semantics"></div>
+          <div class="translator"></div>
+          <div class="tutorial"></div>
+          <div class="feedback"></div>
+          <div class="results"></div>
+
+
+
+<div class="panel panel-default">
+  <div class="panel-heading">Analyse der Geheimschrift</div>
+  <div class="panel-body">
+
+  <form action="code/index.html"  value="Darstellung der Ort und Jahre">
+
+Im Rahmen einer Masterarbeit wurden die Geheimschriftstellen computerlinguistisch untersucht. Die Analyse ist ort-und zeitbezogen.
+Sie gliedert sich in eine diatopische Analyse, eine Anlayse der ethisch-religi&ouml;sen Schrift, eine Sentiment Analyse und eine Korrelation von Sentiments/ ethisch-religi&ouml;ser Schrift.
+Hier eine &Uuml;bersicht:
+
+	<h2> Analyse der ethisch-religi&ouml;sen Schrift</h2>
+			<img src ="code/Intro/ethisch-time.png" width="400" alt="">
+			<img src ="code/Intro/ethisch-place.png" width="400" alt="">
+	<h2> Sentiment Analyse</h2>
+			<img src ="code/Intro/sentiment-year-xt.png" width="400" alt="">
+			<img src="code/Intro/sentiment-place-xt.png" width="400" alt="">
+	<h2> Korrelation Gott/ negative Sentiments</h2>
+			<img src ="code/Intro/corr-time.png" width="400" alt="">
+			<img src="code/Intro/corr-place.png" width="400" alt="">
+
+  </div>
+  </div>
+
+ <footer class="footer">
+            <p class="container">
+              <div class="text-muted footer-line text-center">
+                All rights reserved. © The Master and Fellows of Trinity College, Cambridge; The University of Bergen, Bergen.
+              </div>
+              <div class="text-muted footer-line text-center">
+                Reproduced by permission of The Master and Fellows of Trinity College, Cambridge.
+              </div>
+              <div class="text-muted footer-line text-center">
+                The sale, further reproduction or use of this image for commercial purposes without prior permission from the copyright holder is prohibited.
+              </div>
+              <div class="text-muted footer-line text-center">
+                The image was produced with the support of the Stanhill Foundation, London.
+              </div>
+            </p>
+          </footer>
+        </div> <!--col9-->
+      </div> <!--row-->
+    </div> <!--container-->
+    <div class="settings"></div>
+  </body>
+</html>
